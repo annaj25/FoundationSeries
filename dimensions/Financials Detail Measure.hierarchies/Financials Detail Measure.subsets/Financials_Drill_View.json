@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"Financials_Drill_View",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Financials Detail Measure')/Hierarchies('Financials Detail Measure')/Elements('Line Item Description')"
+		},
+		{
+			"@id":"Dimensions('Financials Detail Measure')/Hierarchies('Financials Detail Measure')/Elements('Document Date')"
+		},
+		{
+			"@id":"Dimensions('Financials Detail Measure')/Hierarchies('Financials Detail Measure')/Elements('Activity')"
+		}
+	]
+}

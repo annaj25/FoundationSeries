@@ -1,0 +1,29 @@
+{
+	"@type":"Cube",
+	"Name":"Forecast Driver Assumptions",
+	"Rules@Code.link":"Forecast Driver Assumptions.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Forecast Driver Assumptions Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Forecast Driver Assumptions.views/Default.json",
+		"Forecast Driver Assumptions.views/Forecast Driver Input.json",
+		"Forecast Driver Assumptions.views/ve-export.json"
+	]
+}

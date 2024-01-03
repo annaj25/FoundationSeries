@@ -1,0 +1,82 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Asset Type",
+	"Elements":
+	[
+		{
+			"Name":"All Asset Types",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Network Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tooling & Test Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Furniture & Fixtures",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Computer Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Software",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Leasehold Improvement",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Machinery & Equipment",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Network Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Tooling & Test Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Furniture & Fixtures",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Computer Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Software",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Leasehold Improvement",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Asset Types",
+			"ComponentName":"Machinery & Equipment",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Asset Type.subsets/Asset Types.json",
+		"Asset Type.subsets/Default.json"
+	]
+}

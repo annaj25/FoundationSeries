@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"FX Rate Measure",
+	"Elements":
+	[
+		{
+			"Name":"Average Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Spot Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Average Rate Override",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Spot Rate Override",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

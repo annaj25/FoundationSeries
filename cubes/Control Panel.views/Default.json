@@ -1,0 +1,80 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Control Panel Measure')/Hierarchies('Control Panel Measure')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Control Panel Measure')/Hierarchies('Control Panel Measure')/Elements('Value')"
+					},
+					{
+						"@id":"Dimensions('Control Panel Measure')/Hierarchies('Control Panel Measure')/Elements('Description')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Control Panel Parameter')/Hierarchies('Control Panel Parameter')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Control Panel Parameter')/Hierarchies('Control Panel Parameter')/Elements('Starting Forecast Month')"
+					},
+					{
+						"@id":"Dimensions('Control Panel Parameter')/Hierarchies('Control Panel Parameter')/Elements('Starting Forecast Year')"
+					},
+					{
+						"@id":"Dimensions('Control Panel Parameter')/Hierarchies('Control Panel Parameter')/Elements('Last Actual Period')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actuals')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Budget')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

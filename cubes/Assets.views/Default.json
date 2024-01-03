@@ -1,0 +1,104 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Asset Life (in months)')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Decomission Year')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Decomission Month')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Description')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Date of Purchase')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Purchase Amount')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Decomission Date')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('TM1 Purchase Date')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('TM1 Decommission Date')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Purchase Date')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('Asset Type')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('In-Service Date')"
+					},
+					{
+						"@id":"Dimensions('Assets Measure')/Hierarchies('Assets Measure')/Elements('TM1 In-Service Date')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Department')/Hierarchies('Department')/Subsets('Departments - Level 0')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Asset')/Hierarchies('Asset')/Subsets('Assets - Lvl 0')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actuals')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Budget')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

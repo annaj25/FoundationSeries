@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Expense Detail Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Expense Detail Measure')/Hierarchies('Expense Detail Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Expense Detail Measure.hierarchies/Expense Detail Measure.json"
+	]
+}

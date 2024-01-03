@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Headcount Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Headcount Measure')/Hierarchies('Headcount Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Headcount Measure.hierarchies/Headcount Measure.json"
+	]
+}

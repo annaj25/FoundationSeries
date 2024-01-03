@@ -1,0 +1,36 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Employee Allocation Measure",
+	"Elements":
+	[
+		{
+			"Name":"Allocation Percentage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation Start",
+			"Type":"String"
+		},
+		{
+			"Name":"Allocation Start (TM1)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation Start (Excel)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation End",
+			"Type":"String"
+		},
+		{
+			"Name":"Allocation End (TM1)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation End (Excel)",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

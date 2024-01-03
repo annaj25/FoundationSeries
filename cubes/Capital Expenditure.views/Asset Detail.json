@@ -1,0 +1,83 @@
+{
+	"@type":"NativeView",
+	"Name":"Asset Detail",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Period')/Hierarchies('Period')/Subsets('Current Year')"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Department')/Hierarchies('Department')/Subsets('Departments - Level 0')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Asset')/Hierarchies('Asset')/Subsets('Default')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Capital Expenditure Measure')/Hierarchies('Capital Expenditure Measure')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Capital Expenditure Measure')/Hierarchies('Capital Expenditure Measure')/Elements('Purchase Amount')"
+					},
+					{
+						"@id":"Dimensions('Capital Expenditure Measure')/Hierarchies('Capital Expenditure Measure')/Elements('Depreciation')"
+					},
+					{
+						"@id":"Dimensions('Capital Expenditure Measure')/Hierarchies('Capital Expenditure Measure')/Elements('Net Asset Value')"
+					},
+					{
+						"@id":"Dimensions('Capital Expenditure Measure')/Hierarchies('Capital Expenditure Measure')/Elements('Adjustment')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actuals')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Budget')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

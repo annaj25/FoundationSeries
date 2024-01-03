@@ -1,0 +1,46 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M01')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M02')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M03')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M04')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M05')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M06')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M07')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M08')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M09')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M10')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M11')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('M12')"
+		},
+		{
+			"@id":"Dimensions('Month')/Hierarchies('Month')/Elements('All Months')"
+		}
+	]
+}

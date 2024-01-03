@@ -1,0 +1,53 @@
+SKIPCHECK;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+# Allows adjustments
+['Adjustment'] =  N: IF( DB('Assets',!Version,!Asset,!Department,'TM1 In-Service date') = 0, 0, Continue );
+
+['Adjustment'] =  N: IF(
+		DAYNO(!Period | '-01') >= DB('Assets',!Version,!Asset,!Department,'TM1 In-Service date') &
+		DB('Assets',!Version,!Asset,!Department,'TM1 In-Service date') <=
+			DB('Assets',!Version,!Asset,!Department,'TM1 decommission date'),
+		Continue, 0 );
+
+['Depreciation'] =  N: IF(
+	['Amount' ] = 0 &
+	( DB('Capital Expenditure',!Version, !Asset,!Department,
+		ATTRS('Period', !Period, 'Prior Period') ,'Net Asset Value') <
+	  ( DB('Assets',!Version,!Asset,!Department,'Purchase Amount') \
+	   	DB('Assets',!Version,!Asset,!Department,'Asset Life (in months)') ) ),
+	DB('Capital Expenditure',!Version,!Asset,!Department,
+		ATTRS('Period', !Period, 'Prior Period'),'Net Asset Value') ,
+	Continue);
+
+['Depreciation'] =  N:
+	DB('Assets',!Version,!Asset,!Department,'Purchase Amount') \
+	   DB('Assets',!Version,!Asset,!Department,'Asset Life (in months)') +
+	['Adjustment' ] ;
+
+# Set the asset purchase amount in the period it was purchased
+['Purchase Amount'] =  N:
+IF(DB('Assets',!Version,!Asset,!Department,'TM1 In-Service date') >= DB('}Calendar',SUBST(!Period,1,4),'M' | SUBST(!Period,6,2),'TM1 Beg Date') &
+    DB('Assets',!Version,!Asset,!Department,'TM1 In-Service date') < DB('}Calendar',SUBST(ATTRS('Period',!Period,'Next Period'),1,4), 'M' | SUBST(ATTRS('Period',!Period,'Next Period'),6,2),'TM1 Beg Date') ,
+DB('Assets',!Version,!Asset,!Department,'Purchase Amount'),
+0);
+
+# Calculate the balance/remaining balance of the new assets
+#['Current Assets', 'Net Asset Value'] = 0;
+['Net Asset Value'] =  N:
+	DB('Capital Expenditure',!Version,!Asset,!Department,
+		ATTRS('Period',!Period,'Prior Period'),'Net Asset Value') +
+		['Amount'] - ['Depreciation'];
+
+Feeders;
+[Version:'Forecast','Adjustment' ] => ['Depreciation'] ;
+
+[Version:'Forecast','All Assets', 'Depreciation'] => DB(If (
+	DB('}Global Settings', 'Feed CapEx Depreciation to Forecast?', 'Value') @= 'Yes','Forecast',''), !Version,
+		'Local', !Department,
+		ATTRS ( 'Capital Expenditure Measure', !Capital Expenditure Measure, 'Account Lookup' ), !Period, 'Forecast Entry');
+
+[Version:'Forecast'] => DB('Capital Expenditure Analysis', !Version, 'local',
+	DB('Assets', !Version, !Asset, !Department, 'Asset Type'), !Asset,!Department, !Period, !Capital Expenditure Measure);
+    

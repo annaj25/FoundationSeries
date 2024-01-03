@@ -1,0 +1,73 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Commission %')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('401k Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Fringe Benefits Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Bonus Payout Month')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('SUTA Rates')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('SUTA Caps')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('SUTA Wage Limits')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Basic Life and A&D Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Bonus %')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Car Allowance %')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FICA Cap')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FICA Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FICA Wage Limit')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FUTA Cap')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FUTA Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FUTA Wage Limit')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Health Insurance Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Long Term Disability Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Merit Increase %')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Overtime %')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Short Term Disability Rate')"
+		},
+		{
+			"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Workers Comp Rate')"
+		}
+	]
+}

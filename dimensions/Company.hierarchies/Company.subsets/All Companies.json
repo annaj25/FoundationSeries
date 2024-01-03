@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Companies",
+	"Expression":"{{TM1FILTERBYLEVEL(TM1SUBSETALL([Company].[Company]) , 0)}}"
+}

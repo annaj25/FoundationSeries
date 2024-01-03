@@ -1,0 +1,164 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Employee Measure",
+	"Elements":
+	[
+		{
+			"Name":"Annual Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base Rate",
+			"Type":"String"
+		},
+		{
+			"Name":"Birth Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Bonus %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Car Allowance %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Car Allowance % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Commission %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Commission % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"State",
+			"Type":"String"
+		},
+		{
+			"Name":"Cost Center",
+			"Type":"String"
+		},
+		{
+			"Name":"Department",
+			"Type":"String"
+		},
+		{
+			"Name":"Employee ID",
+			"Type":"String"
+		},
+		{
+			"Name":"Employee Class",
+			"Type":"String"
+		},
+		{
+			"Name":"Current Flag",
+			"Type":"String"
+		},
+		{
+			"Name":"Department Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Employment Classification",
+			"Type":"String"
+		},
+		{
+			"Name":"End Date",
+			"Type":"String"
+		},
+		{
+			"Name":"End Date (Excel)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"End Date (TM1)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FLSA Status",
+			"Type":"String"
+		},
+		{
+			"Name":"Job Title",
+			"Type":"String"
+		},
+		{
+			"Name":"Merit Increase %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Merit Increase % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Monthly Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overtime %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overtime % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Pay Frequency",
+			"Type":"String"
+		},
+		{
+			"Name":"Salaried Flag",
+			"Type":"String"
+		},
+		{
+			"Name":"Salesperson Flag",
+			"Type":"String"
+		},
+		{
+			"Name":"Sales Territory Country",
+			"Type":"String"
+		},
+		{
+			"Name":"Sales Territory Group",
+			"Type":"String"
+		},
+		{
+			"Name":"Sales Territory Region",
+			"Type":"String"
+		},
+		{
+			"Name":"Sick Leave Hours",
+			"Type":"String"
+		},
+		{
+			"Name":"Start Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Start Date (Excel)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Start Date (TM1)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Status",
+			"Type":"String"
+		},
+		{
+			"Name":"Vacation Hours",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

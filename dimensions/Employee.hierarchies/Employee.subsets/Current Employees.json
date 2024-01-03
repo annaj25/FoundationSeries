@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Current Employees",
+	"Expression":"{TM1DRILLDOWNMEMBER( {TM1SubsetBasis()}, ALL, RECURSIVE )}"
+}

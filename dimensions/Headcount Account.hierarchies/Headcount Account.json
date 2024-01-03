@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Headcount Account",
+	"Elements":
+	[
+		{
+			"Name":"Home FTE",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

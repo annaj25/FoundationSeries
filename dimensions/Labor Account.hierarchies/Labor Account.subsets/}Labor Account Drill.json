@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"}Labor Account Drill",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Labor Account')/Hierarchies('Labor Account')/Elements('Car Allowance')"
+		}
+	]
+}

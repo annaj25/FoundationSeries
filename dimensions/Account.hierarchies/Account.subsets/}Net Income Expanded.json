@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"}Net Income Expanded",
+	"Expression":"{ DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( {[Account].[Net Income]},{[Account].[Net Income]} ) }, {[Account].[Operating Income]} ) }, {[Account].[Operating Income].[Gross Profit]} ) }, {[Account].[Operating Income].[Gross Profit].[Cost of Revenue]} ) }, {[Account].[Operating Income].[Gross Profit].[Revenue]} ) }, {[Account].[Total Expenses]} ) }, {[Account].[Departmental Expenses]} ) }  "
+}

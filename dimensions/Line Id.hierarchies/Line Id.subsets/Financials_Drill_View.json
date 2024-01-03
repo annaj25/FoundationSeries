@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Financials_Drill_View",
+	"Expression":"{[Line Id].[All Line Ids].Children, [Line Id].[All Line Ids]}"
+}

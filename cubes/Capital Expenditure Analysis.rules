@@ -1,0 +1,41 @@
+skipcheck;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+[Currency:'Local'] = N:If(!Asset Type @= DB('Assets', !Version, !Asset, !Department, 'Asset Type'),
+	DB('Capital Expenditure', !Version, !Asset, !Department, !Period, !Capital Expenditure Measure),
+	continue);
+
+
+#Region Currency Exchange
+#[ ] = N: IF (
+#                ( !Currency @<> 'Local') &
+#                ATTRS( 'Cost Center', SUBST( !Department, 1, 2 ),  'Currency') @= !Currency,
+#                ['Local'], Continue );
+# Commented rule above and optimized. 4/14/2023
+[Currency:'Local'] = N: STET;
+[ ] = N: IF (ATTRS( 'Cost Center', SUBST( !Department, 1, 2 ),  'Currency') @= !Currency,
+                ['Local'], Continue );
+
+[Currency: 'USD', CapitalExpenditureMeasure:{'Purchase Amount', 'Net Asset Value'} ]  = N:
+			DB('Capital Expenditure Analysis', !Version, 'Local', !Asset Type, !Asset, !Department, !Period, !Capital Expenditure Measure ) *
+               DB('FX Rates',!Version, ATTRS( 'Department', SUBST( !Department, 1, 2 ), 'Currency'), !Period, 'Average Rate');
+
+['USD' ]  = N:
+               DB('Capital Expenditure Analysis', !Version, 'Local', !Asset Type, !Asset, !Department, !Period, !Capital Expenditure Measure )  *
+               DB('FX Rates',!Version, ATTRS( 'Department', SUBST( !Department, 1, 2 ), 'Currency'), !Period, 'Average Rate');
+
+#Endregion
+
+
+Feeders;
+#[ Currency:'Local'] =>
+#	['USD' ] ,
+#	DB('Capital Expenditure Analysis', IF (!Version @<> 'Actuals', !Version, ''),
+#		IF ( !Currency @=  ATTRS ( 'Department', SUBST( !Department, 1, 2 ),  'Currency'), !Currency, '' )
+#			,!Asset Type, !Asset, !Department, !Period, !Capital Expenditure Measure);
+
+# New rules without conditional feeders - 4/14/2023
+[Version:'Forecast', Currency:'Local'] => [Currency:'USD'];
+[Version:'Forecast', Currency:'Local'] => DB('Capital Expenditure Analysis', !Version,
+	DB( '}ElementAttributes_Department', SUBST( !Department, 1, 2 ), 'Currency'), !Asset Type, !Asset, !Department, !Period, !Capital Expenditure Measure);

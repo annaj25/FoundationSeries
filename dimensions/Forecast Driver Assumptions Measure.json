@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Forecast Driver Assumptions Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Forecast Driver Assumptions Measure')/Hierarchies('Forecast Driver Assumptions Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Forecast Driver Assumptions Measure.hierarchies/Forecast Driver Assumptions Measure.json"
+	]
+}

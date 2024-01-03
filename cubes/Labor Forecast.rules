@@ -1,0 +1,516 @@
+SKIPCHECK;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+[] = N:If (SUBST(!Period,6,2) @= '00',0,Continue);
+
+#Region Currency Exchange
+
+[LaborAccount:'FTE',  LaborForecastMeasure:'Forecast Entry' ]  = N:  IF ( !Currency @<> 'Local',
+	[Currency: 'local', LaborAccount:'FTE',  LaborForecastMeasure:'Forecast Entry' ],
+	Continue);
+
+[ ] = N: IF (
+                ( !Currency @<> 'Local'  &
+                ATTRS( 'Department', SUBST( !Department, 1, 2 ),  'Currency') @= !Currency),
+                ['Local'], Continue );
+
+[Currency: 'USD', LaborForecastMeasure:'Forecast Entry' ]  = N:
+			DB('Labor Forecast', !Version, 'Local', !Employee, !Department, !Labor Account,  !Period, !Labor Forecast Measure ) *
+               DB('FX Rates',!Version, ATTRS( 'Department', SUBST( !Department, 1, 2 ), 'Currency'), !Period, 'Average Rate');
+
+
+
+
+#Endregion
+
+[{'FTE', 'Home FTE'}] = C: IF ( ELLEV ( 'Period', !Period ) > 0,
+     DB ( 'Employee Department', !Version, !Employee, !Department, ATTRS ( 'Period', !Period, 'Period End' ), 'FTE' ),
+     Continue );
+
+#Region FTE
+[Currency:'local',LaborAccount:'FTE', 'Forecast Entry'] = N: DB('Employee Department', !Version, !Employee, !Department, !Period, 'FTE' );
+
+[Currency:'local',LaborAccount:'Home FTE',  'Home Department'] = N: IF ( ELISANC('Employee', 'New', !Employee) > 0,
+	DB('Employee Department', !Version, !Employee, !Department, !Period, 'FTE' ),
+	DB('Employee Department', !Version, !Employee, !Department, !Period, 'Home FTE' ));
+
+#EndRegion
+
+#Allocation of Labor Expenses based on allocation percentages
+[Currency:'local',LaborForecastMeasure:'Forecast Entry'] = N: IF ( ELISANC('Employee', 'New', !Employee) > 0 & ELISANC('Labor Account', 'Labor Expenses', !Labor Account) > 0,
+	DB('Labor Forecast',!Version, !Currency, !Employee,!Department,!Labor Account,!Period,' department Department'),
+	Continue);
+
+[Currency:'local',LaborForecastMeasure:'Forecast Entry'] = N: IF ( ELISANC('Employee', 'New', !Employee) > 0,
+	0,
+	Continue);
+
+[Currency:'local',LaborForecastMeasure:'Forecast Entry'] = N:  IF ( ELISANC('Labor Account', 'Labor Expenses', !Labor Account) > 0,
+	 DB('Labor Forecast',!Version, !Currency,!Employee,DB('}Employee Information',!Version, !Employee, 'Home Department'),!Labor Account,!Period,'Home Department') *
+	[LaborAccount: 'FTE', LaborForecastMeasure:'Forecast Entry'],
+	Continue);
+
+#Region Salaries and Merit Increase
+
+#Calculate New Employee Hourly Salary
+[Currency:'local', LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] = N:
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0 &
+		DB('Employee Forecast', !Version,!Department, !Employee, 'Salaried Flag') @= 'H',
+		NUMBR(DB('Employee Forecast', !Version, !Department, !Employee, 'Base Rate')) * 8 *
+		DB ( '}Calendar', SUBST(!Period,1,4), 'M' | SUBST(!Period,6,2), 'Business Days'),
+		Continue );
+
+#Calculate Current Employee Hourly Salary
+[Currency:'local',LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] = N:
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+	IF ( ELISANC('Employee', 'New', !Employee) = 0 &
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Salaried Flag') @= 'H',
+		NUMBR(DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Base Rate')) * 8 *
+		DB ( '}Calendar', SUBST(!Period,1,4), 'M' | SUBST(!Period,6,2), 'Business Days'),
+		Continue );
+
+#Calculate Salaried Employees New and Current Salary
+[Currency:'local',LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] = N:
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Monthly Salary'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Monthly Salary' ) );
+
+#No merit increase for months prior to merit increase month of starting forecast year
+[Currency:'local',LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] = N: IF(
+            !Version @<> ('Actuals') &
+            DayNo( DB( 'Control Panel', !Version, 'Starting Forecast Year', 'Value' ) | '-' |
+              ATTRS( 'Month', DB( 'Labor Rate', !Version, 'Merit Increase Month', 'SValue' ), 'Numeric Month' ) | '-' | '01' ) >
+            DayNo( !Period | '-' | '01' ),
+              0,
+            Continue
+          );
+
+[Currency:'local',LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] = N: IF([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] = 0,
+              0,
+            Continue
+          );
+
+#Merit increase for Employee
+[Currency:'local',LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] = N:
+    If (NUMBR(ATTRS( 'Month', DB( 'Labor Rate', !Version, 'Merit Increase Month', 'SValue' ), 'Numeric Month' )) <= NUMBR(  ATTRS( 'Month', 'M' | SUBST(!Period,6,2), 'Numeric Month' )   ) &
+	NUMBR( SUBST(!Period,1,4)) = NUMBR( DB( 'Control Panel', !Version, 'Starting Forecast Year', 'Value' ) ),
+                [LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] *
+	(IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Merit Increase %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Merit Increase %' ))),
+	Continue);
+
+[Currency:'local',LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] = N:
+    If ((NUMBR(ATTRS( 'Month', DB( 'Labor Rate', !Version, 'Merit Increase Month', 'SValue' ), 'Numeric Month' )) > NUMBR(ATTRS( 'Month', 'M' | SUBST(!Period,6,2), 'Numeric Month' ))) &
+	(NUMBR( SUBST(!Period,1,4)) = NUMBR( DB( 'Control Panel', !Version, 'Starting Forecast Year', 'Value' ) ) + 1),
+                [LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] *
+	(IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Merit Increase %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Merit Increase %' ))),
+	Continue);
+
+#Merit Future Year calcs
+[Currency:'local',LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] = N:IF (
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Salaried Flag') @= 'H',
+     	((DB('Labor Forecast',!Version, !Currency,!Employee,!Department,'Total Salaries',ATTRS('Period',!Period,'Prior Year Period'),!Labor Forecast Measure) \
+                    DB ( '}Calendar', SUBST(ATTRS('Period',!Period,'Prior Year Period'),1,4), 'M' | SUBST(ATTRS('Period',!Period,'Prior Year Period'),6,2), 'Business Days')) *
+	 DB ( '}Calendar', SUBST(!Period,1,4), 'M' | SUBST(!Period,6,2), 'Business Days')) *
+	(IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Merit Increase %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Merit Increase %' ))) +
+		DB('Labor Forecast',!Version, !Currency,!Employee,!Department,'Merit Increase',ATTRS('Period',!Period,'Prior Year Period'),!Labor Forecast Measure),
+	Continue) ;
+
+[Currency:'local',LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] = N:
+     	DB('Labor Forecast',!Version, !Currency,!Employee,!Department,'Total Salaries',ATTRS('Period',!Period,'Prior Year Period'),!Labor Forecast Measure) *
+	(IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Merit Increase %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Merit Increase %' ))) +
+		DB('Labor Forecast',!Version, !Currency,!Employee,!Department,'Merit Increase',ATTRS('Period',!Period,'Prior Year Period'),!Labor Forecast Measure) ;
+
+#EndRegion
+
+#Region Overtime
+[Currency:'local',LaborAccount:'Overtime', LaborForecastMeasure:'Home Department'] = N:
+     [LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Overtime %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Overtime %' ) );
+#EndRegion
+
+#Region Bonus
+[Currency:'local',LaborAccount:'Bonus', LaborForecastMeasure:'Home Department'] = N: IF (
+	( SUBST(ATTRS ( 'Period', !Period, 'Abbreviation' ),6,3) @= DB ( 'Labor Rate', !Version, 'Bonus Payout Month', 'SValue' ) ) &
+     DB( 'Labor Rate', !Version, 'Bonus Calculation Method', 'SValue' ) @= '% of Salary',
+     [ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Annual Salary'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Annual Salary' ) ) *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Bonus %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Bonus %' ) ),
+     Continue) ;
+
+##This method requires that actuals be loaded and an overlay rule be created to bring in actuals by employee for the first year of the forecast.
+[Currency:'local',LaborAccount:'Bonus', LaborForecastMeasure:'Home Department'] = N: IF (
+	( SUBST(ATTRS ( 'Period', !Period, 'Abbreviation' ),6,3) @= DB ( 'Labor Rate', !Version, 'Bonus Payout Month', 'SValue' ) ) &
+     DB( 'Labor Rate', !Version, 'Bonus Calculation Method', 'SValue' ) @= '% of Prior Year M12 YTD Earnings',
+     [ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+	DB ( 'Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions',ATTRS('Period',!Period,'Prior Year'),'Home Department' ) *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Bonus %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Bonus %' ) ),
+     0) ;
+
+[Currency:'local',LaborAccount:'Bonus', LaborForecastMeasure:'Home Department'] = N: 0 ;
+
+##EndRegion
+
+#Region Commission
+[Currency:'local',LaborAccount:'Commissions', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] *
+	IF ( ELISANC('Employee', 'New', !Employee) > 0,
+		DB('Employee Forecast', !Version, !Department, !Employee, 'Commission %'),
+		DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'Commission %' ) );
+#EndRegion
+
+#Region Other Employee Benefits
+[Currency:'local',LaborAccount:'401K', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, '401k Rate', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Basic Life and A&D Insurance', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Basic Life and A&D Rate', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Car Allowance', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Car Allowance %', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Fringe Benefits', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Fringe Benefits Rate', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Health Insurance', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Health Insurance Rate', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Long Term Disability', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Long Term Disability Rate', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Short Term Disability', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Short Term Disability Rate', 'Value' ) ;
+
+[Currency:'local',LaborAccount:'Workers Compensation', LaborForecastMeasure:'Home Department'] = N:
+	[LaborAccount:'Salaries', LaborForecastMeasure:'Home Department'] * DB ( 'Labor Rate', !Version, 'Workers Comp Rate', 'Value' ) ;
+#EndRegion
+
+#region Payroll Taxes
+
+#Region Payroll Tax based on Percentage
+[Currency:'local',LaborAccount:'Payroll Tax by Percentage', LaborForecastMeasure:'Home Department'] = N:
+	If (DB('}Global Settings', 'Payroll Tax Calculation Method', 'Value') @= 'Payroll %',
+	[LaborAccount:'Total Salaries and Commissions', LaborForecastMeasure:'Home Department'] *
+	DB ( 'Labor Rate', !Version, 'Payroll Tax Percent', 'Value' ),
+	0) ;
+
+#EndRegion
+
+#Start YTD over on January
+[Currency:'local',LaborAccount:'Total Salaries and Commissions YTD Prior Period', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan',
+	0, Continue );
+
+[Currency:'local','Total Salaries and Commissions YTD Prior Period'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions YTD', ATTRS('Period',!Period,'Prior Period'), 'Home Department');
+
+##Region Social Security and Medicare
+##Region Social Security Rules
+#
+[Currency:'local',LaborAccount:'Social Security', LaborForecastMeasure:'Home Department'] = N: IF (
+    DB('}Global Settings', 'Payroll Tax Calculation Method', 'Value') @<> 'FUTA, SUTA, FICA',
+    0,
+    Continue);
+
+#Start YTD over on January
+[Currency:'local',LaborAccount:'Social Security YTD Prior Period', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan',
+	0, Continue );
+
+[Currency:'local',LaborAccount:'Social Security YTD Prior Period', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD', ATTRS('Period',!Period,'Prior Period'), 'Home Department');
+
+[Currency:'local',LaborAccount:'Social Security', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions YTD', !Period, 'Home Department') >=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'Social Security Limit', 'Value')),
+	(DB('Labor Rate', !Version, 'Social Security Limit', 'Value') *
+	DB('Labor Rate', !Version, 'Social Security Rate', 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ]),
+	Continue );
+
+[Currency:'local',LaborAccount:'Social Security', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @<>  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD',  ATTRS('Period',!Period,'Prior Period'), 'Home Department') >=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'Social Security Limit', 'Value') *
+		DB('Labor Rate', !Version, 'Social Security Rate', 'Value')),
+	0,
+	Continue );
+
+[Currency:'local',LaborAccount:'Social Security', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @<>  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD',  ATTRS('Period',!Period,'Prior Period'), 'Home Department')<=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'Social Security Limit', 'Value') *
+		DB('Labor Rate', !Version, 'Social Security Rate', 'Value')) &
+	(DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'Social Security Rate', 'Value') >
+	(DB('Labor Rate', !Version, 'Social Security Limit', 'Value') *
+	DB('Labor Rate', !Version, 'Social Security Rate', 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ])  -
+		DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD',
+			ATTRS('Period', !Period, 'Prior Period'), 'Home Department')),
+	(DB('Labor Rate', !Version, 'Social Security Limit', 'Value') *
+	DB('Labor Rate', !Version, 'Social Security Rate', 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ])  -
+		DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD',
+			ATTRS('Period', !Period, 'Prior Period'), 'Home Department'),
+	Continue );
+
+[Currency:'local',LaborAccount:'Social Security', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'Social Security Rate', 'Value');
+
+[Currency:'local',LaborAccount:'Medicare', LaborForecastMeasure:'Home Department'] = N: IF (
+    DB('}Global Settings', 'Payroll Tax Calculation Method', 'Value') @<> 'FUTA, SUTA, FICA',
+    0,
+    Continue);
+
+[Currency:'local',LaborAccount:'Medicare', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'Medicare Rate', 'Value');
+
+##Region FUTA
+##Region FUTA Rules
+#
+[Currency:'local',LaborAccount:'FUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+    DB('}Global Settings', 'Payroll Tax Calculation Method', 'Value') @<> 'FUTA, SUTA, FICA',
+    0,
+    Continue);
+
+#Start YTD over on January
+[Currency:'local',LaborAccount:'FUTA YTD Prior Period', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan',
+	0, Continue );
+
+[Currency:'local',LaborAccount:'FUTA YTD Prior Period', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD', ATTRS('Period',!Period,'Prior Period'), 'Home Department');
+
+[Currency:'local',LaborAccount:'FUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions YTD', !Period, 'Home Department') >=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'FUTA Wage Limit', 'Value')),
+	(DB('Labor Rate', !Version, 'FUTA Wage Limit', 'Value') *
+	DB('Labor Rate', !Version, 'FUTA Rate', 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ]),
+	Continue );
+
+[Currency:'local',LaborAccount:'FUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @<>  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD',  ATTRS('Period',!Period,'Prior Period'), 'Home Department') >=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'FUTA Wage Limit', 'Value') *
+		DB('Labor Rate', !Version, 'FUTA Rate', 'Value')),
+	0,
+	Continue );
+
+[Currency:'local',LaborAccount:'FUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @<>  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD',  ATTRS('Period',!Period,'Prior Period'), 'Home Department')<=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'FUTA Wage Limit', 'Value') *
+		DB('Labor Rate', !Version, 'FUTA Rate', 'Value')) &
+	(DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'FUTA Rate', 'Value') >
+	(DB('Labor Rate', !Version, 'FUTA Wage Limit', 'Value') *
+	DB('Labor Rate', !Version, 'FUTA Rate', 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ])  -
+		DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD',
+			ATTRS('Period', !Period, 'Prior Period'), 'Home Department')),
+	(DB('Labor Rate', !Version, 'FUTA Wage Limit', 'Value') *
+	DB('Labor Rate', !Version, 'FUTA Rate', 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ])  -
+		DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD',
+			ATTRS('Period', !Period, 'Prior Period'), 'Home Department'),
+	Continue );
+
+[Currency:'local',LaborAccount:'FUTA', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'FUTA Rate', 'Value');
+
+##Endregion
+
+#Calculate SUTA
+[Currency:'local',LaborAccount:'SUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+    DB('}Global Settings', 'Payroll Tax Calculation Method', 'Value') @<> 'FUTA, SUTA, FICA',
+    0,
+    Continue);
+
+#Start YTD over on January
+[Currency:'local',LaborAccount:'SUTA YTD Prior Period', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan',
+	0, Continue );
+
+[Currency:'local',LaborAccount:'SUTA YTD Prior Period', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD', ATTRS('Period',!Period,'Prior Period'), 'Home Department');
+
+[Currency:'local',LaborAccount:'SUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @=  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions YTD', !Period, 'Home Department') >=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'SUTA Wage Limit : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value')),
+	(DB('Labor Rate', !Version, 'SUTA Wage Limit : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee,'State' )), 'Value') *
+	DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ]),
+	Continue );
+
+[Currency:'local',LaborAccount:'SUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @<>  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD',  ATTRS('Period',!Period,'Prior Period'), 'Home Department') >=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'SUTA Wage Limit : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+		DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value')),
+	0,
+	Continue );
+
+[Currency:'local',LaborAccount:'SUTA', LaborForecastMeasure:'Home Department'] = N: IF (
+	SUBST(ATTRS('Period',!Period,'Abbreviation'),6,3) @<>  'Jan' &
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD',  ATTRS('Period',!Period,'Prior Period'), 'Home Department')<=
+		([ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] *
+		DB('Labor Rate', !Version, 'SUTA Wage Limit : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+		DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value')) &
+	(DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') >
+	(DB('Labor Rate', !Version, 'SUTA Wage Limit : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+	DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ])  -
+		DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD',
+			ATTRS('Period', !Period, 'Prior Period'), 'Home Department')),
+	(DB('Labor Rate', !Version, 'SUTA Wage Limit : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+	DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value') *
+	[ LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ])  -
+		DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD',
+			ATTRS('Period', !Period, 'Prior Period'), 'Home Department'),
+	Continue );
+
+[Currency:'local',LaborAccount:'SUTA', LaborForecastMeasure:'Home Department'] = N:
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions', !Period, 'Home Department') *
+		DB('Labor Rate', !Version, 'SUTA Rate : ' |
+			IF ( ELISANC('Employee', 'New', !Employee) > 0,
+				DB('Employee Forecast', !Version, !Department, !Employee, 'State'),
+				DB ( 'Employee Forecast', !Version, DB('}Employee Information',!Version, !Employee, 'Home Department'), !Employee, 'State' )), 'Value');
+
+##Endregion
+
+FEEDERS;
+
+#Internal Feeders
+
+[Version:'Forecast',Currency:'Local',LaborForecastMeasure:'Forecast Entry'] => ['USD', LaborForecastMeasure:'Forecast Entry' ] ;
+
+[Version:'Forecast',Currency:'local',LaborAccount:'FTE', LaborForecastMeasure:'Forecast Entry' ] => [LaborAccount:'Labor Expenses', LaborForecastMeasure:'Forecast Entry' ];
+[Version:'Forecast',Currency:'local',LaborForecastMeasure:'Home Department' ] => [LaborForecastMeasure:'Forecast Entry' ];
+
+
+[Version:'Forecast',Currency:'local',LaborAccount:'Home FTE', LaborForecastMeasure:'Home Department' ] =>
+	[LaborAccount:'Bonus', LaborForecastMeasure:'Home Department'] ,
+	[LaborAccount:'Salaries',  LaborForecastMeasure:'Home Department'] ;
+
+[Version:'Forecast',Currency:'local',LaborAccount:'Salaries',  LaborForecastMeasure:'Home Department'] =>
+	[LaborAccount:'401K', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Commissions', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Basic Life and A&D Insurance', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Car Allowance', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Social Security', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Fringe Benefits', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'FUTA', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Medicare', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Health Insurance', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Long Term Disability', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Merit Increase', LaborForecastMeasure:'Home Department'] ,
+	[LaborAccount:'Overtime', LaborForecastMeasure:'Home Department'] ,
+	[LaborAccount:'Short Term Disability', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'SUTA', LaborForecastMeasure:'Home Department'],
+	[LaborAccount:'Workers Compensation', LaborForecastMeasure:'Home Department'];
+
+[Version:'Forecast',Currency:'local',LaborAccount:'Salaries',  LaborForecastMeasure:'Home Department'] => DB('Labor Forecast',!Version, !Currency,!Employee,!Department,'Merit',ATTRS('Period',!Period,'Next Year Period'),!Labor Forecast Measure);
+
+[Version:'Forecast',Currency:'local',LaborAccount:'Total Salaries and Commissions',  LaborForecastMeasure:'Home Department'] =>
+	[LaborAccount:'Payroll Tax by Percentage', LaborForecastMeasure:'Home Department'];
+
+[Version:'Forecast',Currency:'local','Total Salaries and Commissions YTD', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Total Salaries and Commissions YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+[Version:'Forecast',Currency:'local','Social Security YTD Prior Period', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+[Version:'Forecast',Currency:'local','Social Security', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'Social Security YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+[Version:'Forecast',Currency:'local','FUTA YTD Prior Period', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+[Version:'Forecast',Currency:'local','FUTA', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'FUTA YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+[Version:'Forecast',Currency:'local','SUTA YTD Prior Period', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+[Version:'Forecast',Currency:'local','SUTA', 'Home Department'] =>
+	DB('Labor Forecast', !Version, !Currency, !Employee, !Department, 'SUTA YTD Prior Period', ATTRS('Period',!Period,'Next Period'), 'Home Department');
+
+# External Feeders
+#[Currency:'local','All Employees'] => DB ( If (long(trim(ATTRS('Labor Account',!Labor Account,'AccountLookup'))) > 0,
+#	'Forecast',''), !Version, !Currency, !Department, ATTRS ( 'Labor Account', !Labor Account, 'AccountLookup' ),!Period, !Labor Forecast Measure );
+
+## Replaced conditional feeder and optimized a bit - 4/13/2023
+[Version:'Forecast',Currency:'local',Employee:'All Employees'] => DB ( 'Forecast', !Version, !Currency, !Department, DB( '}ElementAttributes_Labor Account', !Labor Account, 'AccountLookup' ),!Period, !Labor Forecast Measure );
+
+[] => DB('zLabor Forecast Feeders',!Version,!Currency,!Employee,!Department,!Labor Account,!Period,!Labor Forecast Measure);

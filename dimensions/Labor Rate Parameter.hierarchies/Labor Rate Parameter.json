@@ -1,0 +1,1569 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Labor Rate Parameter",
+	"Elements":
+	[
+		{
+			"Name":"Commission %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Tax Percent",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"401k Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fringe Benefits Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus Calculation Method",
+			"Type":"String"
+		},
+		{
+			"Name":"Bonus Payout Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Merit Increase Month",
+			"Type":"String"
+		},
+		{
+			"Name":"SUTA Rates",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"SUTA Cap : AK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : AL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : AR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : AZ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : CA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : CO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : CT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : DC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : DE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : FL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : GA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : HI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : IA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : ID",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : IL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : IN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : KS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : KY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : LA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : ME",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : MT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : ND",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NJ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NV",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : NY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : OK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : OR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : PA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : PR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : RI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : SC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : SD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : TN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : TX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : UT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : VA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : VI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : VT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : WA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : WI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : WV",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Cap : WY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : AK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : AL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : AR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : AZ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : CA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : CO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : CT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : DC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : DE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : FL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : GA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : HI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : IA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : ID",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : IL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : IN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : KS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : KY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : LA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : ME",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : MT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : ND",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NJ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NV",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : NY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : OK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : OR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : PA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : PR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : RI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : SC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : SD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : TN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : TX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : UT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : VA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : VI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : VT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : WA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : WI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : WV",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Rate : WY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : AK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : AL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : AR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : AZ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : CA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : CO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : CT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : DC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : DE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : FL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : GA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : HI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : IA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : ID",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : IL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : IN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : KS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : KY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : LA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : ME",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MO",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MS",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : MT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : ND",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NJ",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NV",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : NY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : OH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : OK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : OR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : PA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : PR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : RI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : SC",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : SD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : TN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : TX",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : UT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : VA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : VI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : VT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : WA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : WI",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : WV",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Wage Limit : WY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA Caps",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"SUTA Wage Limits",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Basic Life and A&D Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Car Allowance %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FICA Cap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FICA Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FICA Wage Limit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FUTA Cap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FUTA Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FUTA Wage Limit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Health Insurance Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Long Term Disability Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Merit Increase %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overtime %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Short Term Disability Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Workers Comp Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Social Security Cap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Social Security Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Social Security Limit",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medicare Cap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medicare Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medicare Limit",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : AK",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : AL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : AR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : AZ",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : CA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : CT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : DC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : DE",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : FL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : HI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : IA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : ID",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : IN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : KS",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : KY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MD",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : ME",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MO",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MS",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : MT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : ND",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NE",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NH",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NM",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NV",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : NY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : OH",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : OK",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : OR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : PA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : PR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : RI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : SC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : SD",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : TN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : UT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : VA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : VI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : VT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : WA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : WI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : WV",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Rates",
+			"ComponentName":"SUTA Rate : WY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : AK",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : AL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : AR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : AZ",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : CA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : CT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : DC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : DE",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : FL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : HI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : IA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : ID",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : IN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : KS",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : KY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MD",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : ME",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MO",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MS",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : MT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : ND",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NE",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NH",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NM",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NV",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : NY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : OH",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : OK",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : OR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : PA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : PR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : RI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : SC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : SD",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : TN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : UT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : VA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : VI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : VT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : WA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : WI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : WV",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Caps",
+			"ComponentName":"SUTA Cap : WY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : AK",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : AL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : AR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : AZ",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : CA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : CO",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : CT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : DC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : DE",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : FL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : GA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : HI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : IA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : ID",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : IL",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : IN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : KS",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : KY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : LA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MD",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : ME",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MO",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MS",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : MT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : ND",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NE",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NH",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NJ",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NM",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NV",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : NY",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : OH",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : OK",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : OR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : PA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : PR",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : RI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : SC",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : SD",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : TN",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : TX",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : UT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : VA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : VI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : VT",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : WA",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : WI",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : WV",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA Wage Limits",
+			"ComponentName":"SUTA Wage Limit : WY",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Labor Rate Parameter.subsets/Default.json"
+	]
+}

@@ -1,0 +1,93 @@
+{
+	"@type":"NativeView",
+	"Name":"Allocation Input - Multi-department with Transfer",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Employee Allocation Measure')/Hierarchies('Employee Allocation Measure')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Employee Allocation Measure')/Hierarchies('Employee Allocation Measure')/Elements('Allocation Percentage')"
+					},
+					{
+						"@id":"Dimensions('Employee Allocation Measure')/Hierarchies('Employee Allocation Measure')/Elements('Allocation Start')"
+					},
+					{
+						"@id":"Dimensions('Employee Allocation Measure')/Hierarchies('Employee Allocation Measure')/Elements('Allocation End')"
+					}
+				]
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Department')/Hierarchies('Department')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Department')/Hierarchies('Department')/Elements('10-120')"
+					},
+					{
+						"@id":"Dimensions('Department')/Hierarchies('Department')/Elements('10-121')"
+					},
+					{
+						"@id":"Dimensions('Department')/Hierarchies('Department')/Elements('10-122')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actuals')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Budget')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Employee')/Hierarchies('Employee')/Subsets('Default')"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Employee')/Hierarchies('Employee')/Elements('All Employees')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}

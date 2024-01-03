@@ -1,0 +1,40 @@
+{
+	"@type":"Subset",
+	"Name":"Other Expenditures",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Administrative')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Depreciation & Amortization')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Engineering')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Equipment')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Facilities')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Marketing')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Outside Services')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Recruiting & Relocation')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Telecommunications & Hosting')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Travel & Entertainment')"
+		}
+	]
+}

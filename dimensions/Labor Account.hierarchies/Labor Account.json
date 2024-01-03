@@ -1,0 +1,337 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Labor Account",
+	"Elements":
+	[
+		{
+			"Name":"FTE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Home FTE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Labor Expenses",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FICA YTD Prior Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Salaries and Commissions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total Salaries and Bonus",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Bonus",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Salaries and Overtime",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Total Salaries",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Salaries",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Merit Increase",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overtime",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Commissions",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FICA",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Social Security",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA YTD",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"SUTA YTD Prior Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Medicare",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FUTA YTD",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FUTA YTD Prior Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Salaries And Commissions YTD",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Social Security YTD",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Social Security YTD Prior Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Salaries and Commissions YTD Prior Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FUTA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SUTA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Payroll Tax by Percentage",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Car Allowance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Workers Compensation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Health Insurance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Basic Life and A&D Insurance",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Long Term Disability",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Short Term Disability",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"401k",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Fringe Benefits",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Employee Benefits",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Payroll Taxes",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Employee Benefits",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Labor Expenses",
+			"ComponentName":"Total Salaries and Commissions",
+			"Weight":1
+		},
+		{
+			"ParentName":"Labor Expenses",
+			"ComponentName":"Payroll Taxes",
+			"Weight":1
+		},
+		{
+			"ParentName":"Labor Expenses",
+			"ComponentName":"Employee Benefits",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries and Commissions",
+			"ComponentName":"Total Salaries and Bonus",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries and Commissions",
+			"ComponentName":"Commissions",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries and Bonus",
+			"ComponentName":"Bonus",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries and Bonus",
+			"ComponentName":"Total Salaries and Overtime",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries and Overtime",
+			"ComponentName":"Total Salaries",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries and Overtime",
+			"ComponentName":"Overtime",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries",
+			"ComponentName":"Salaries",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries",
+			"ComponentName":"Merit Increase",
+			"Weight":1
+		},
+		{
+			"ParentName":"FICA",
+			"ComponentName":"Social Security",
+			"Weight":1
+		},
+		{
+			"ParentName":"FICA",
+			"ComponentName":"Medicare",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA YTD",
+			"ComponentName":"SUTA YTD Prior Period",
+			"Weight":1
+		},
+		{
+			"ParentName":"SUTA YTD",
+			"ComponentName":"SUTA",
+			"Weight":1
+		},
+		{
+			"ParentName":"FUTA YTD",
+			"ComponentName":"FUTA YTD Prior Period",
+			"Weight":1
+		},
+		{
+			"ParentName":"FUTA YTD",
+			"ComponentName":"FUTA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries And Commissions YTD",
+			"ComponentName":"Total Salaries and Commissions YTD Prior Period",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Salaries And Commissions YTD",
+			"ComponentName":"Total Salaries and Commissions",
+			"Weight":1
+		},
+		{
+			"ParentName":"Social Security YTD",
+			"ComponentName":"Social Security YTD Prior Period",
+			"Weight":1
+		},
+		{
+			"ParentName":"Social Security YTD",
+			"ComponentName":"Social Security",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Employee Benefits",
+			"ComponentName":"Workers Compensation",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Employee Benefits",
+			"ComponentName":"Basic Life and A&D Insurance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Employee Benefits",
+			"ComponentName":"Long Term Disability",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Employee Benefits",
+			"ComponentName":"Short Term Disability",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Employee Benefits",
+			"ComponentName":"Fringe Benefits",
+			"Weight":1
+		},
+		{
+			"ParentName":"Payroll Taxes",
+			"ComponentName":"FICA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Payroll Taxes",
+			"ComponentName":"FUTA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Payroll Taxes",
+			"ComponentName":"SUTA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Payroll Taxes",
+			"ComponentName":"Payroll Tax by Percentage",
+			"Weight":1
+		},
+		{
+			"ParentName":"Employee Benefits",
+			"ComponentName":"Car Allowance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Employee Benefits",
+			"ComponentName":"Health Insurance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Employee Benefits",
+			"ComponentName":"401k",
+			"Weight":1
+		},
+		{
+			"ParentName":"Employee Benefits",
+			"ComponentName":"Other Employee Benefits",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Labor Account.subsets/Default.json",
+		"Labor Account.subsets/}Labor Account Drill.json"
+	]
+}

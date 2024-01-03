@@ -1,0 +1,145 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Company",
+	"Elements":
+	[
+		{
+			"Name":"All Companies",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"00",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"21",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"22",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"23",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"25",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"30",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"32",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"35",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"40",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"50",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"98",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"00",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"10",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"15",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"20",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"21",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"22",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"23",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"25",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"30",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"32",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"35",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"40",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"50",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Companies",
+			"ComponentName":"98",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Company.subsets/All Companies.json",
+		"Company.subsets/Default.json"
+	]
+}

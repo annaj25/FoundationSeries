@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"FC Entry",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Forecast Measure')/Hierarchies('Forecast Measure')/Elements('Forecast Entry')"
+		}
+	]
+}

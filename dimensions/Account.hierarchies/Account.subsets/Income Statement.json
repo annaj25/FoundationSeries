@@ -1,0 +1,37 @@
+{
+	"@type":"Subset",
+	"Name":"Income Statement",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Cost of Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Gross Profit')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Departmental Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Total Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Operating Income')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other Income/Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Tax')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Net Income')"
+		}
+	]
+}

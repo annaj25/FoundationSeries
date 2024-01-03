@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Labor Rate Measure",
+	"Elements":
+	[
+		{
+			"Name":"SValue",
+			"Type":"String"
+		},
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

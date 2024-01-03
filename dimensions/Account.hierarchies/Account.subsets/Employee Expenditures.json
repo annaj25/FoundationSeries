@@ -1,0 +1,16 @@
+{
+	"@type":"Subset",
+	"Name":"Employee Expenditures",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Benefits')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Compensation')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Contractors & Temps')"
+		}
+	]
+}

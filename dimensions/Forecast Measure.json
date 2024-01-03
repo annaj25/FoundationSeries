@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Forecast Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Forecast Measure')/Hierarchies('Forecast Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Forecast Measure.hierarchies/Forecast Measure.json"
+	]
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{ DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [Employee] )}, \"All Employees\")}, {[Employee].[All Employees]} ) }"
+}

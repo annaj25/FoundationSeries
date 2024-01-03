@@ -1,0 +1,76 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Forecast Driver Assumptions Measure",
+	"Elements":
+	[
+		{
+			"Name":"Driver Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Method",
+			"Type":"String"
+		},
+		{
+			"Name":"Method Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Rate",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Calculation Drivers",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"3 Month Average",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"6 Month Average",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"12 Month Average",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Last Month Actuals",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Calculation Drivers",
+			"ComponentName":"3 Month Average",
+			"Weight":1
+		},
+		{
+			"ParentName":"Calculation Drivers",
+			"ComponentName":"6 Month Average",
+			"Weight":1
+		},
+		{
+			"ParentName":"Calculation Drivers",
+			"ComponentName":"12 Month Average",
+			"Weight":1
+		},
+		{
+			"ParentName":"Calculation Drivers",
+			"ComponentName":"Value",
+			"Weight":1
+		},
+		{
+			"ParentName":"Calculation Drivers",
+			"ComponentName":"Last Month Actuals",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

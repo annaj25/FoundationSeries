@@ -1,0 +1,28 @@
+{
+	"@type":"Cube",
+	"Name":"Employee Department",
+	"Rules@Code.link":"Employee Department.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Employee')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Employee Department Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Employee Department.views/Default.json",
+		"Employee Department.views/VE - Export.json"
+	]
+}

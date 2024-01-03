@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Labor Account",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Labor Account')/Hierarchies('Labor Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Labor Account.hierarchies/Labor Account.json"
+	]
+}

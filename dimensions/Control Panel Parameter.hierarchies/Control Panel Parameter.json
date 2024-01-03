@@ -1,0 +1,32 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Control Panel Parameter",
+	"Elements":
+	[
+		{
+			"Name":"Starting Forecast Month",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Starting Forecast Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Starting Forecast Period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Last Actual Month",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Last Actual Year",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Last Actual Period",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

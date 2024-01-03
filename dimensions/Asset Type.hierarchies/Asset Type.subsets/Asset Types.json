@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Asset Types",
+	"Expression":"{TM1FILTERBYLEVEL( { HIERARCHIZE( {TM1SUBSETALL( [Asset Type] )} ) }, 0)}"
+}

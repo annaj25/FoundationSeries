@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Capital Expenditure Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Capital Expenditure Measure')/Hierarchies('Capital Expenditure Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Capital Expenditure Measure.hierarchies/Capital Expenditure Measure.json"
+	]
+}

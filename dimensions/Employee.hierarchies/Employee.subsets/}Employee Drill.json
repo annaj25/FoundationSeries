@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"}Employee Drill",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Employee')/Hierarchies('Employee')/Elements('New Employee 00005')"
+		}
+	]
+}

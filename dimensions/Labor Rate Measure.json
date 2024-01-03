@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Labor Rate Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Labor Rate Measure')/Hierarchies('Labor Rate Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Labor Rate Measure.hierarchies/Labor Rate Measure.json"
+	]
+}

@@ -1,0 +1,25 @@
+{
+	"@type":"Cube",
+	"Name":"Employee Forecast",
+	"Rules@Code.link":"Employee Forecast.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Employee')"
+		},
+		{
+			"@id":"Dimensions('Employee Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Employee Forecast.views/Default.json",
+		"Employee Forecast.views/VE - Export.json"
+	]
+}

@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Employee Department Measure",
+	"Elements":
+	[
+		{
+			"Name":"FTE",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Home FTE",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

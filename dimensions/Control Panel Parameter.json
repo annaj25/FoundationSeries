@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Control Panel Parameter",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Control Panel Parameter')/Hierarchies('Control Panel Parameter')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Control Panel Parameter.hierarchies/Control Panel Parameter.json"
+	]
+}

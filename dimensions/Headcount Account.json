@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Headcount Account",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Headcount Account')/Hierarchies('Headcount Account')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Headcount Account.hierarchies/Headcount Account.json"
+	]
+}

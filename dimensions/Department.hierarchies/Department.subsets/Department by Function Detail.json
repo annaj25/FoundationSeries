@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Department by Function Detail",
+	"Expression":"{{DISTINCT({DESCENDANTS([Department].[Department].[Departments by Function])})}}"
+}

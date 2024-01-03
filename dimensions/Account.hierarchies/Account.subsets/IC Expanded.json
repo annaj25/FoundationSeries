@@ -1,0 +1,61 @@
+{
+	"@type":"Subset",
+	"Name":"IC Expanded",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Net Income')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Operating Income')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Gross Profit')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Cost of Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Intercompany Costs')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Product Cost of Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Service Costs')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Intercompany Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Product & Software Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Service Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Total Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Departmental Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Allocations')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Direct Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other Income/Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Tax')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other')"
+		}
+	]
+}

@@ -1,0 +1,357 @@
+{
+	"@type":"Hierarchy",
+	"Name":"CashFlow_Indirect",
+	"Elements":
+	[
+		{
+			"Name":"Cash Flow from Investing Activities",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales/(Purchases) of Plant & Equipment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Cash from Investing Activities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash Flow from Financing Activities",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Receipts/(Payments) of Short-Term Debt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Receipts/(Payments) of Long-Term Debt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Proceeds/(Purchases) of Preferred Stock",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Proceeds/(Purchases) of Common Stock",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Proceeds/(Purchases) of Additional Paid-In Capital",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Receipts/(Payments) of Capital Lease Obligations",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Cash from Financing",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash at Beginning of period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Increase/(Decrease) in Cash",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash at End of period",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Flows from Operating Activities",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Income",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustments to Net Income",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Depreciation & Amortization",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Changes in Assets & Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"(Inc)/Dec in Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"(Inc)/Dec in Deferred Assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Long-term Tax Assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Long-term Deferred Assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Restricted Cash-LT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Restricted Cash-ST",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Other ST Receivables & Advances",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in ST Tax Assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"ST Tax Assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Liabilities",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Inc/(Dec) in Deferred Liabilities-ST",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Deferred Revenue-ST",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Deferred Revenue-LT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Deferred Tax Liability-LT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Receivables",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Inventory",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Other Current Assets",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"(Inc)/Dec in Prepaid Expenses",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Payables",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Accrued Expenses",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Inc/(Dec) in Other Current Liabilities",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total Adjustments",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net Cash Provided by Operating Activities",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Net Cash from Investing Activities",
+			"ComponentName":"Cash Flow from Investing Activities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Investing Activities",
+			"ComponentName":"Sales/(Purchases) of Plant & Equipment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Cash Flow from Financing Activities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Receipts/(Payments) of Short-Term Debt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Receipts/(Payments) of Long-Term Debt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Proceeds/(Purchases) of Preferred Stock",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Proceeds/(Purchases) of Common Stock",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Proceeds/(Purchases) of Additional Paid-In Capital",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash from Financing",
+			"ComponentName":"Receipts/(Payments) of Capital Lease Obligations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase/(Decrease) in Cash",
+			"ComponentName":"Net Cash Provided by Operating Activities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase/(Decrease) in Cash",
+			"ComponentName":"Net Cash from Investing Activities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase/(Decrease) in Cash",
+			"ComponentName":"Net Cash from Financing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Changes in Assets & Liabilities",
+			"ComponentName":"(Inc)/Dec in Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Changes in Assets & Liabilities",
+			"ComponentName":"Inc/(Dec) in Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"(Inc)/Dec in Assets",
+			"ComponentName":"(Inc)/Dec in Deferred Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"(Inc)/Dec in Assets",
+			"ComponentName":"(Inc)/Dec in Long-term Tax Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"(Inc)/Dec in Assets",
+			"ComponentName":"(Inc)/Dec in Long-term Deferred Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"(Inc)/Dec in Assets",
+			"ComponentName":"(Inc)/Dec in Restricted Cash-LT",
+			"Weight":1
+		},
+		{
+			"ParentName":"(Inc)/Dec in Assets",
+			"ComponentName":"(Inc)/Dec in Restricted Cash-ST",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inc/(Dec) in Liabilities",
+			"ComponentName":"Inc/(Dec) in Deferred Liabilities-ST",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inc/(Dec) in Liabilities",
+			"ComponentName":"Inc/(Dec) in Deferred Revenue-ST",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inc/(Dec) in Liabilities",
+			"ComponentName":"Inc/(Dec) in Deferred Revenue-LT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Inc/(Dec) in Liabilities",
+			"ComponentName":"Inc/(Dec) in Deferred Tax Liability-LT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Adjustments to Net Income",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Depreciation & Amortization",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Changes in Assets & Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"(Inc)/Dec in Receivables",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"(Inc)/Dec in Inventory",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"(Inc)/Dec in Other Current Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Inc/(Dec) in Payables",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Inc/(Dec) in Accrued Expenses",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total Adjustments",
+			"ComponentName":"Inc/(Dec) in Other Current Liabilities",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided by Operating Activities",
+			"ComponentName":"Total Adjustments",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided by Operating Activities",
+			"ComponentName":"Net Income",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided by Operating Activities",
+			"ComponentName":"Cash Flows from Operating Activities",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"CashFlow_Indirect.subsets/Cash Flow - Indirect.json"
+	]
+}

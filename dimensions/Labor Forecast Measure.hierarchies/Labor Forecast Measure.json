@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Labor Forecast Measure",
+	"Elements":
+	[
+		{
+			"Name":"Forecast Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Home Department",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

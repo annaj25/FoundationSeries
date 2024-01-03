@@ -1,0 +1,88 @@
+{
+	"@type":"Subset",
+	"Name":"Cash Flow - Indirect",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Net Income')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Adjustments to Net Income')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Depreciation & Amortization')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Changes in Assets & Liabilities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('(Inc)/Dec in Receivables')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('(Inc)/Dec in Inventory')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('(Inc)/Dec in Other Current Assets')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Inc/(Dec) in Payables')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Inc/(Dec) in Accrued Expenses')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Inc/(Dec) in Other Current Liabilities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Total Adjustments')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Cash Flows from Operating Activities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Net Cash Provided by Operating Activities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Cash Flow from Investing Activities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Sales/(Purchases) of Plant & Equipment')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Net Cash from Investing Activities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Cash Flow from Financing Activities')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Receipts/(Payments) of Short-Term Debt')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Receipts/(Payments) of Long-Term Debt')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Proceeds/(Purchases) of Preferred Stock')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Proceeds/(Purchases) of Common Stock')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Proceeds/(Purchases) of Additional Paid-In Capital')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Receipts/(Payments) of Capital Lease Obligations')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Net Cash from Financing')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Net Increase/(Decrease) in Cash')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Cash at Beginning of period')"
+		},
+		{
+			"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')/Elements('Cash at End of period')"
+		}
+	]
+}

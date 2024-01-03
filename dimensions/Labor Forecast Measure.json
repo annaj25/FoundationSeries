@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Labor Forecast Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Labor Forecast Measure')/Hierarchies('Labor Forecast Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Labor Forecast Measure.hierarchies/Labor Forecast Measure.json"
+	]
+}

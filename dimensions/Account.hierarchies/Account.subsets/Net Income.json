@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Net Income",
+	"Expression":"{TM1DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( { HIERARCHIZE( {TM1SUBSETALL( [Account] )} ) }, \"Net Income\")}, ALL, RECURSIVE )}"
+}

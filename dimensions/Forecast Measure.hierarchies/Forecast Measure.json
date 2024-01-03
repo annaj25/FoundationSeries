@@ -1,0 +1,71 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Forecast Measure",
+	"Elements":
+	[
+		{
+			"Name":"test",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Total",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Adjustment",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Forecast Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocations",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Percent of Revenue",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Percent of Gross Margin",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Comments",
+			"Type":"String"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Total",
+			"ComponentName":"Forecast Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Allocations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Total",
+			"ComponentName":"Adjustment",
+			"Weight":1
+		},
+		{
+			"ParentName":"Percent of Revenue",
+			"ComponentName":"Total",
+			"Weight":1
+		},
+		{
+			"ParentName":"Percent of Gross Margin",
+			"ComponentName":"Total",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Forecast Measure.subsets/FC Entry.json"
+	]
+}

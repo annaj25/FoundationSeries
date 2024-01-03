@@ -1,0 +1,18 @@
+Skipcheck;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+['Value'] = N: If (ELISANC('Labor Rate Parameter','SUTA Caps',!Labor Rate Parameter) = 1,
+	DB('Labor Rate', !Version, 'SUTA Wage Limit : ' | SUBST(!Labor Rate Parameter,12,2),'Value') *
+	DB('Labor Rate', !Version, 'SUTA Rate : ' | SUBST(!Labor Rate Parameter,12,2),'Value'),
+	Continue);
+
+Feeders;
+#region Internal Feeders
+#EndRegion
+#region External Feeders
+[Version:'Forecast',LaborRateParameter:'Bonus %', LaborRateMeasure:'Value'] => DB('}Employee Forecast', !Version, 'All Cost Centers',  'Current', 'Bonus %');
+[Version:'Forecast',LaborRateParameter:'Commission %', LaborRateMeasure:'Value'] => DB('}Employee Forecast', !Version, 'All Cost Centers',  'Current', 'Commission %');
+[Version:'Forecast',LaborRateParameter:'Merit Increase %', LaborRateMeasure:'Value'] => DB('}Employee Forecast', !Version, 'All Cost Centers',  'Current', 'Merit Increase %');
+[Version:'Forecast',LaborRateParameter:'Overtime %', LaborRateMeasure:'Value'] => DB('}Employee Forecast', !Version, 'Current', 'All Cost Centers',  'Overtime %');
+#endregion

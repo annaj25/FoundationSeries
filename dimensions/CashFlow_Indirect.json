@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"CashFlow_Indirect",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('CashFlow_Indirect')/Hierarchies('CashFlow_Indirect')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"CashFlow_Indirect.hierarchies/CashFlow_Indirect.json"
+	]
+}

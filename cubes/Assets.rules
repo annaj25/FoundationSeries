@@ -1,0 +1,113 @@
+SKIPCHECK;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+# Calculate TM1 purchase date
+#['TM1 purchase date'] =
+#	N: IF( ['Date of Purchase'] > 0,['Date of Purchase'] - 21916, 0 );
+#	C: 0;
+#['TM1 Purchase Date'] = N: If (DB('Assets', !Version, !Asset, !Department, 'Purchase Date') @<> '',
+#	DayNo(
+#	SUBST(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'),7,4) | '-' |
+#	SUBST(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'),1,2) | '-' |
+#	SUBST(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'),4,2)),
+#	0);
+
+['TM1 Purchase Date'] = N: If (DB('Assets', !Version, !Asset, !Department, 'Purchase Date') @<> '',
+	DayNo(
+	SUBST(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'),
+		Long(trim(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'))) - 3,4) | '-' |
+	SUBST(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'),1,
+		Scan('/',DB('Assets', !Version, !Asset, !Department, 'Purchase Date')) - 1) | '-' |
+	SUBST(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'),
+		Scan('/',DB('Assets', !Version, !Asset, !Department, 'Purchase Date')) + 1,
+		Long(trim(DB('Assets', !Version, !Asset, !Department, 'Purchase Date'))) - 5 -
+		Scan('/',DB('Assets', !Version, !Asset, !Department, 'Purchase Date')))),
+	0);
+
+['TM1 In-Service Date'] = N: If (DB('Assets', !Version, !Asset, !Department, 'In-Service Date') @<> '',
+	DayNo(
+	SUBST(DB('Assets', !Version, !Asset, !Department, 'In-Service Date'),
+		Long(trim(DB('Assets', !Version, !Asset, !Department, 'In-Service Date'))) - 3,4) | '-' |
+	SUBST(DB('Assets', !Version, !Asset, !Department, 'In-Service Date'),1,
+		Scan('/',DB('Assets', !Version, !Asset, !Department, 'In-Service Date')) - 1) | '-' |
+	SUBST(DB('Assets', !Version, !Asset, !Department, 'In-Service Date'),
+		Scan('/',DB('Assets', !Version, !Asset, !Department, 'In-Service Date')) + 1,
+		Long(trim(DB('Assets', !Version, !Asset, !Department, 'In-Service Date'))) - 5 -
+		Scan('/',DB('Assets', !Version, !Asset, !Department, 'In-Service Date')))),
+	0);
+
+['Date of Purchase'] = N:['TM1 Purchase Date'] + 21916;
+
+#['Purchase Date'] = S:If(['TM1 Purchase Date'] > 0,Date(['TM1 Purchase Date'],1),'');
+
+# Calculate Asset Decommission Year
+['Decomission Year'] =  S: IF(
+	['TM1 In-Service date'] > 0 & ['Asset Life (in months)' ] > 0,
+	STR(
+		INT( TIMVL( DB('Assets', !Version, !Asset, !Department, 'TM1 In-Service date'), 'Y', 0) +
+		(TIMVL( DB('Assets', !Version, !Asset, !Department, 'TM1 In-Service date'), 'M', 0) \ 12)+
+		DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') \ 12 ) ,
+		4, 0),
+	'');
+
+# Calculate Asset Decommission Month
+['Decomission Month'] = S: IF(
+	['TM1 In-Service date'] > 0 & ['Asset Life (in months)' ] > 0 ,
+	IF (
+		( TIMVL( DB('Assets', !Version, !Asset, !Department, 'TM1 In-Service date'), 'M', 0) +
+		( ( DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') /12 ) -
+		   INT( DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') /12 ) )* 12 ) > 12,
+
+		STR(
+			( TIMVL( DB('Assets', !Version, !Asset, !Department, 'TM1 In-Service date'), 'M', 0) +
+			( ( DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') /12 ) -
+		      INT( DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') /12 ) )* 12  - 12 ),
+	    	2, 0),
+		STR(
+			( TIMVL( DB('Assets', !Version, !Asset, !Department, 'TM1 In-Service date'), 'M', 0) +
+			( ( DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') /12 ) -
+		      INT( DB('Assets', !Version, !Asset, !Department, 'Asset Life (in months)') /12 ) )* 12  ),
+	    	2, 0) ) , '');
+
+# Calculate Asset Decommission Year
+['Decomission Date'] =  S: IF(
+		['TM1 In-Service date'] > 0 & ['Asset Life (in months)' ] > 0,
+	DB('Assets', !Version, !Asset, !Department, 'Decomission Year') | '-' |
+	IF ( Long ( Trim ( DB('Assets', !Version, !Asset, !Department, 'Decomission Month') ) ) = 1,
+		'0' | Trim( DB('Assets', !Version, !Asset, !Department, 'Decomission Month' )),
+		DB('Assets', !Version, !Asset, !Department, 'Decomission Month' ) ) |
+	TIMST( DB('Assets', !Version, !Asset, !Department, 'TM1 In-Service date'), '-\d') , '');
+
+# Calculate TM1 decommission date
+['TM1 decommission date'] = N:
+	IF ( Long( Trim( DB('Assets', !Version, !Asset, !Department, 'Decomission Date') ) ) > 0,
+		DayNo( DB('Assets', !Version, !Asset, !Department, 'Decomission Date') ), 0 );
+	C: 0;
+
+
+
+FEEDERS;
+#Internal Feeders;
+#['Date of Purchase'] =>['TM1 purchase date'];
+[Version:'Forecast','In-Service Date'] => ['TM1 In-Service Date'];
+
+[Version:'Forecast','Purchase Date'] => ['TM1 Purchase Date'];
+
+[Version:'Forecast','Decomission Date'] => ['TM1 decommission date'];
+
+[Version:'Forecast','TM1 purchase date'] =>
+	['Date of Purchase'];
+
+[Version:'Forecast','TM1 In-Service date'] =>
+	['Decomission Date'] ,
+	['Decomission Month'] ,
+	['Decomission Year'] ;
+
+#INTERCUBE FEEDER
+
+# FEED Depreciation in Capital Expenditure Cube
+[Version:'Forecast','Purchase Amount']=>
+	DB('Capital Expenditure',!Version,!Asset,!Department,'All Periods','Depreciation'),
+	DB('Capital Expenditure',!Version,!Asset,!Department,'All Periods','Net Asset Value'),
+	DB('Capital Expenditure', !Version, !Asset, !Department, 'All Periods', 'Purchase Amount');

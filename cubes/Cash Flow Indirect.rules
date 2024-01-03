@@ -1,0 +1,138 @@
+FORMAT==100
+skipcheck;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+[ CashFlow_Indirect:'Net income' ] = N: DB('Forecast',!Version,'Local',!Company,'Net Income', !Year | '-' | Subst(!Month, 2,2),'Total');
+
+
+#Operating Activies
+
+#Operating Assets
+[ CashFlow_Indirect:'Depreciation & Amortization' ] = N:  DB('Forecast',!Version,'Local',!Company,'Depreciation & Amortization', !Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Receivables' ] = N: DB('Forecast',!Version,'Local',!Company,'Accounts Receivable',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Accounts Receivable',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Inventory' ] = N: DB('Forecast',!Version,'Local',!Company,'Inventory',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Inventory',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Other Current Assets' ] = N: DB('Forecast',!Version,'Local',!Company,'Other Current Assets',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Other Current Assets',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Deferred Assets' ] = N: DB('Forecast',!Version,'Local',!Company,'Deferred Assets',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Defered Assets',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Long-term Tax Assets' ] = N: DB('Forecast',!Version,'Local',!Company,'Long-term Tax Assets',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Long-term Tax Assets',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Long-term Deferred Assets' ] = N: DB('Forecast',!Version,'Local',!Company,'Long-term Deferred Assets',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Long-term Deferred Assets',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Restricted Cash-LT' ] = N: DB('Forecast',!Version,'Local',!Company,'Restricted Cash-LT',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Restricted Cash-LT',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+[ CashFlow_Indirect:'(Inc)/Dec in Restricted Cash-ST' ] = N: DB('Forecast',!Version,'Local',!Company,'Restricted Cash-ST',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total')
+					              - DB('Forecast',!Version,'Local',!Company,'Restricted Cash-ST',!Year | '-' | Subst(!Month, 2,2),'Total');
+
+
+
+
+#Operating Liabilities
+[ CashFlow_Indirect:'Inc/(Dec) in Payables' ] = N: DB('Forecast',!Version,'Local',!Company,'Accounts Payable',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Accounts Payable',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Inc/(Dec) in Accrued Expenses' ] = N: DB('Forecast',!Version,'Local',!Company,'Accrued Expenses',!Year | '-' | Subst(!Month, 2,2),'Total')
+				                             - DB('Forecast',!Version,'Local',!Company,'Accrued Expenses',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Inc/(Dec) in Deferred Liabilities-ST' ] = N: DB('Forecast',!Version,'Local',!Company,'Deferred Liabilities-ST',!Year | '-' | Subst(!Month, 2,2),'Total')
+ 			                                              - DB('Forecast',!Version,'Local',!Company,'Deferred Liabilities-ST',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Inc/(Dec) in Deferred Revenue-ST' ] = N: DB('Forecast',!Version,'Local',!Company,'Deferred Revenue-ST',!Year | '-' | Subst(!Month, 2,2),'Total')
+                                                                                              - DB('Forecast',!Version,'Local',!Company,'Deferred Revenue-ST',
+					              	IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Inc/(Dec) in Deferred Revenue-LT' ] = N: DB('Forecast',!Version,'Local',!Company,'Deferred Revenue-LT',!Year | '-' | Subst(!Month, 2,2),'Total')
+                                                                                              - DB('Forecast',!Version,'Local',!Company,'Deferred Revenue-LT',
+					              	IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Inc/(Dec) in Deferred Tax Liability-LT' ] = N: DB('Forecast',!Version,'Local',!Company,'29050',!Year | '-' | Subst(!Month, 2,2),'Total')
+                                                                                              - DB('Forecast',!Version,'Local',!Company,'29050',
+					              	IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Inc/(Dec) in Other Current Liabilities' ] = N: DB('Forecast',!Version,'Local',!Company,'Other Current Liabilities',!Year | '-' | Subst(!Month, 2,2),'Total')
+					              -	DB('Forecast',!Version,'Local',!Company,'Other Current Liabilities',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+
+#Financing Section
+[ CashFlow_Indirect:'Receipts/(Payments) of Short-Term Debt' ] = N: DB('Forecast',!Version,'Local',!Company,'Debt-ST',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Debt-ST',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Receipts/(Payments) of Long-Term Debt' ] = N: DB('Forecast',!Version,'Local',!Company,'Convertible Promissory Note-LT',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Convertible Promissory Note-LT',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+
+[ CashFlow_Indirect:'Receipts/(Payments) of Capital Lease Obligations' ] = N: DB('Forecast',!Version,'Local',!Company,'29010',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'29010',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Sales/(Purchases) of Plant & Equipment' ] = N: DB('Forecast',!Version,'Local',!Company,'Fixed Assets (Net)',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Fixed Assets (Net)',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Sales/(Purchases) of Plant & Equipment' ] = N: DB('Forecast',!Version,'Local',!Company,'Fixed Assets (Net)',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Fixed Assets (Net)',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+
+[ CashFlow_Indirect:'Proceeds/(Purchases) of Common Stock' ] = N: DB('Forecast',!Version,'Local',!Company,'Common Stock',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Common Stock',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Proceeds/(Purchases) of Preferred Stock' ] = N: DB('Forecast',!Version,'Local',!Company,'Preferred Stock',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Preferred Stock',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+
+[ CashFlow_Indirect:'Proceeds/(Purchases) of Additional Paid-In Capital' ] = N: DB('Forecast',!Version,'Local',!Company,'Additional Paid in Capital',!Year | '-' | Subst(!Month, 2,2),'Total')
+					             - DB('Forecast',!Version,'Local',!Company,'Additional Paid in Capital',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+[ CashFlow_Indirect:'Cash at Beginning of Period' ] = N: DB('Forecast',!Version,'Local',!Company,'Cash, Cash Equivalents and Investments',
+						IF( Subst(!Month, 2,2) @= '01', ATTRS('Year', !Year, 'Prior Year') | '-12',  !Year | '-' | Subst(ATTRS('Month', !Month, 'Prior Month'), 2,2)),'Total');
+
+
+['Cash at End of Period'] = N: ['Cash at Beginning of Period'] + ['Net Increase/(Decrease) in Cash'];
+
+
+
+
+
+
+
+
+
+
+# 2016-01
+
+
+
+
+
+Feeders;
+
+[Version:'Forecast','Cash at Beginning of Period'] => ['Cash at End of Period'];

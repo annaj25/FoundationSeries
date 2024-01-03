@@ -1,0 +1,60 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Assets Measure",
+	"Elements":
+	[
+		{
+			"Name":"Asset Life (in months)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Decomission Year",
+			"Type":"String"
+		},
+		{
+			"Name":"Decomission Month",
+			"Type":"String"
+		},
+		{
+			"Name":"Description",
+			"Type":"String"
+		},
+		{
+			"Name":"Date of Purchase",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Purchase Amount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Decomission Date",
+			"Type":"String"
+		},
+		{
+			"Name":"TM1 Purchase Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TM1 Decommission Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Purchase Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Asset Type",
+			"Type":"String"
+		},
+		{
+			"Name":"In-Service Date",
+			"Type":"String"
+		},
+		{
+			"Name":"TM1 In-Service Date",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

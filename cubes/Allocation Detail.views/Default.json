@@ -1,0 +1,96 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Allocation Detail Measure')/Hierarchies('Allocation Detail Measure')"
+				},
+				"Expression":"TM1SubsetAll([Allocation Detail Measure])"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 1')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 2')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 3')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 4')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 5')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 6')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 7')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 8')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 9')"
+					},
+					{
+						"@id":"Dimensions('Allocation ID')/Hierarchies('Allocation ID')/Elements('Allocation 10')"
+					}
+				]
+			}
+		},
+		{
+			"Subset":
+			{
+				"@id":"Dimensions('Line Id')/Hierarchies('Line Id')/Subsets('All Lines')"
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Actuals')"
+					},
+					{
+						"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+					}
+				]
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":true,
+	"SuppressEmptyRows":true,
+	"FormatString":"0.#########"
+}

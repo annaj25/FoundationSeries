@@ -1,0 +1,24 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Capital Expenditure Measure",
+	"Elements":
+	[
+		{
+			"Name":"Purchase Amount",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Depreciation",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Asset Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Adjustment",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

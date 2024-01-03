@@ -1,0 +1,342 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Currency",
+	"Elements":
+	[
+		{
+			"Name":"Local",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Currencies",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"AUD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BRL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CAD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DKK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EUR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"GBP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HKD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MYR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"USD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Currencies",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"IDR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PKR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"AED",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TRY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CNY",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HRK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RUB",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CZK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HUF",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"BGN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"KRW",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SGD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RON",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EGP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"UAH",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SKK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CYP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CHF",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NOK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"SEK",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"MXN",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"DOP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"INR",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"NZD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"CLP",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"PLN",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"AUD",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"BRL",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"CAD",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"DKK",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"EUR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"GBP",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"HKD",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"MYR",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Currencies",
+			"ComponentName":"USD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"IDR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"PKR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"AED",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"TRY",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"CNY",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"HRK",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"RUB",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"CZK",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"HUF",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"BGN",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"KRW",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"SGD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"RON",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"EGP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"UAH",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"SKK",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"CYP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"CHF",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"NOK",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"SEK",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"MXN",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"DOP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"INR",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"NZD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"CLP",
+			"Weight":1
+		},
+		{
+			"ParentName":"Other Currencies",
+			"ComponentName":"PLN",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Currency.subsets/All Currencies.json",
+		"Currency.subsets/Default.json"
+	]
+}

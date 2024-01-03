@@ -1,0 +1,30 @@
+{
+	"@type":"Cube",
+	"Name":"Financials",
+	"Rules@Code.link":"Financials.rules",
+	"DrillthroughRules@Code.link":"Financials.drillthrough.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Financials Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Financials.views/Default.json",
+		"Financials.views/Revenue View.json",
+		"Financials.views/zTM1py.json"
+	]
+}

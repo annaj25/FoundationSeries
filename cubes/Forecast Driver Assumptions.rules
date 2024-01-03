@@ -1,0 +1,45 @@
+skipcheck;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+#Actuals Overlay
+[ Version: 'Forecast', ForecastDriverAssumptionsMeasure:{'Value','3 Month Average', '6 Month Average', '12 Month Average', 'Last Month Actuals'}] = N: IF(
+	DB('Control Panel',!Version,'Starting Forecast Period','Numeric Value') >
+	ATTRN( 'Period', !Period, 'Month Sequence' ),
+		[Version:'Actuals', ForecastDriverAssumptionsMeasure:'Value'],
+		Continue
+          );
+
+
+['Method'] = S:If (long(trim(DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method Override'))) > 0,
+	DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method Override'),
+	Continue);
+
+##['Method'] = S:If (ELLEV('Period',!Period) = 0 & ELLEV('Version',!Version) = 0 & ELLEV('Account',!Account) = 0 & ELLEV('Department',!Department) = 0 &
+##	long(trim(DB('Forecast Driver Assumptions',!Version,!Department,!Account,ATTRS('Period',!Period,'Year'),'Method'))) > 0,
+##	DB('Forecast Driver Assumptions',!Version,!Department,!Account,ATTRS('Period',!Period,'Year'),'Method'),
+##	Continue);
+
+['Method'] = S:If (ELLEV('Period',!Period) = 0,
+	DB('Forecast Driver Assumptions',!Version,!Department,!Account,ATTRS('Period',!Period,'Prior Period'),'Method'),
+	Continue);
+
+#If Method is set at the month, the use it
+[ForecastDriverAssumptionsMeasure:'Value'] = N: If (DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method') @= 'Rolling 3 Month Average', ['3 Month Average'], Continue);
+[ForecastDriverAssumptionsMeasure:'Value'] = N: If (DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method') @= 'Rolling 6 Month Average', ['6 Month Average'], Continue);
+[ForecastDriverAssumptionsMeasure:'Value'] = N: If (DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method') @= 'Rolling 12 Month Average', ['12 Month Average'], Continue);
+[ForecastDriverAssumptionsMeasure:'Value'] = N: If (DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method') @= '% Growth over Last Year', (1+['Rate']) *
+	DB('Forecast Driver Assumptions',!Version,!Department,!Account,ATTRS('Period', !Period, 'Prior Year Period'),!Forecast Driver Assumptions Measure), Continue);
+[ForecastDriverAssumptionsMeasure:'Value'] = N: If (DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method') @= '% Growth over Prior Month', (1+['Rate']) *
+	DB('Forecast Driver Assumptions',!Version,!Department,!Account,ATTRS('Period', !Period, 'Prior Period'),!Forecast Driver Assumptions Measure), Continue);
+[ForecastDriverAssumptionsMeasure:'Value'] = N: If (DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Method') @= 'Last Actual Month', ['Last Month Actuals'], Continue);
+
+feeders;
+
+[Version:'Actuals', ForecastDriverAssumptionsMeasure:'Value'] => [ Version: 'Forecast', ForecastDriverAssumptionsMeasure:'Calculation Drivers'] ;
+# Commented out conditional feeders and replaced - 4/13/2023
+#['Value'] => DB(If ( NUMBR(SUBST(!Period,1,4)) >= NUMBR(DB('Control Panel',!Version,'Starting Forecast Year','Value')) - 1, 'Forecast Driver Assumptions',''),!Version,!Department,!Account,ATTRS('Period',!Period,'Next Year Period'),!Forecast Driver Assumptions Measure);
+#['12 Month Average'] =>  DB(If ( NUMBR(SUBST(!Period,1,4)) >= NUMBR(DB('Control Panel',!Version,'Starting Forecast Year','Value')), 'Forecast Driver Assumptions',''),!Version,!Department,!Account,!Period,'Value');
+['Value'] => DB('Forecast Driver Assumptions',!Version,!Department,!Account,ATTRS('Period',!Period,'Next Year Period'),!Forecast Driver Assumptions Measure);
+['12 Month Average'] =>  DB('Forecast Driver Assumptions',!Version,!Department,!Account,!Period,'Value');
+

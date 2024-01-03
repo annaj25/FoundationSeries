@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Control Panel Measure",
+	"Elements":
+	[
+		{
+			"Name":"Value",
+			"Type":"String"
+		},
+		{
+			"Name":"Numeric Value",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Description",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

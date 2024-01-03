@@ -1,0 +1,12 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Expense Detail Measure",
+	"Elements":
+	[
+		{
+			"Name":"Forecast Entry",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

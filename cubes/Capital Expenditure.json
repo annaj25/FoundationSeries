@@ -1,0 +1,28 @@
+{
+	"@type":"Cube",
+	"Name":"Capital Expenditure",
+	"Rules@Code.link":"Capital Expenditure.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Asset')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Capital Expenditure Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Capital Expenditure.views/Asset Detail.json",
+		"Capital Expenditure.views/Default.json"
+	]
+}

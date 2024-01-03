@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Current Year",
+	"Expression":"{FILTER( {TM1SUBSETALL( [Year] )}, [Year].[Current] = \"Y\")}"
+}

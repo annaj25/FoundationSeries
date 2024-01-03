@@ -1,0 +1,28 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Allocation Measure",
+	"Elements":
+	[
+		{
+			"Name":"Allocation Type",
+			"Type":"String"
+		},
+		{
+			"Name":"Allocation Description",
+			"Type":"String"
+		},
+		{
+			"Name":"From Location",
+			"Type":"String"
+		},
+		{
+			"Name":"From Account",
+			"Type":"String"
+		},
+		{
+			"Name":"Allocation Basis",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}

@@ -1,0 +1,25 @@
+{
+	"@type":"Cube",
+	"Name":"Employee Allocation",
+	"Rules@Code.link":"Employee Allocation.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Employee')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Employee Allocation Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Employee Allocation.views/Allocation Input.json",
+		"Employee Allocation.views/Allocation Input - Multi-department with Transfer.json"
+	]
+}

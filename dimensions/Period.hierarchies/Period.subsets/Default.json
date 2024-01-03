@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{ DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [Period] )}, \"All Periods\")}, {[Period].[All Periods]} ) }"
+}

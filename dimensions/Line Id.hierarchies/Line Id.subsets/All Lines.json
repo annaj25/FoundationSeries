@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Lines",
+	"Expression":"{TM1DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [Line Id] )}, \"All Line Ids\")}, ALL, RECURSIVE )}"
+}

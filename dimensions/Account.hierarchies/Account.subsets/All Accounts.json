@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"All Accounts",
+	"Expression":"{TM1SORT( { HIERARCHIZE( {TM1FILTERBYLEVEL( { HIERARCHIZE( {TM1SUBSETALL( [Account] )} ) }, 0)} ) }, ASC)}"
+}

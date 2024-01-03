@@ -1,0 +1,48 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Allocation ID",
+	"Elements":
+	[
+		{
+			"Name":"Allocation 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 3",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 4",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 5",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 6",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 7",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 8",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 9",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Allocation 10",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

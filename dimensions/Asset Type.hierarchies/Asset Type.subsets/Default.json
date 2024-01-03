@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Default",
+	"Expression":"{DRILLDOWNMEMBER({[Asset Type].[Asset Type].[All Asset Types]} , {[Asset Type].[Asset Type].[All Asset Types]} , RECURSIVE)}"
+}

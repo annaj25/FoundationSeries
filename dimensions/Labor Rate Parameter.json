@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Labor Rate Parameter",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Labor Rate Parameter.hierarchies/Labor Rate Parameter.json"
+	]
+}

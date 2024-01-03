@@ -1,0 +1,20 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Allocation Detail Measure",
+	"Elements":
+	[
+		{
+			"Name":"To Location",
+			"Type":"String"
+		},
+		{
+			"Name":"To Account",
+			"Type":"String"
+		},
+		{
+			"Name":"Percent",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

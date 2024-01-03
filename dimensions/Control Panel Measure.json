@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Control Panel Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Control Panel Measure')/Hierarchies('Control Panel Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Control Panel Measure.hierarchies/Control Panel Measure.json"
+	]
+}

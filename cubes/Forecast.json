@@ -1,0 +1,43 @@
+{
+	"@type":"Cube",
+	"Name":"Forecast",
+	"Rules@Code.link":"Forecast.rules",
+	"DrillthroughRules@Code.link":"Forecast.drillthrough.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Forecast Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Forecast.views/Balance Sheet.json",
+		"Forecast.views/Default.json",
+		"Forecast.views/Expense Summary.json",
+		"Forecast.views/Income Statement.json",
+		"Forecast.views/Income Statement Upside Down.json",
+		"Forecast.views/Input Template View.json",
+		"Forecast.views/Input Template View 2.json",
+		"Forecast.views/Input Template View 3.json",
+		"Forecast.views/Operating Expense.json",
+		"Forecast.views/Percent Calcs.json",
+		"Forecast.views/Research and Development - Net Income.json",
+		"Forecast.views/Revenue.json",
+		"Forecast.views/Trial Balance.json"
+	]
+}

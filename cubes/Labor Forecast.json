@@ -1,0 +1,37 @@
+{
+	"@type":"Cube",
+	"Name":"Labor Forecast",
+	"Rules@Code.link":"Labor Forecast.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Employee')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Labor Account')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Labor Forecast Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Labor Forecast.views/Default.json",
+		"Labor Forecast.views/Employee Detail.json",
+		"Labor Forecast.views/Employee Detail - Department Split.json",
+		"Labor Forecast.views/Employee Detail - Transfer.json",
+		"Labor Forecast.views/Payroll_Drill.json"
+	]
+}

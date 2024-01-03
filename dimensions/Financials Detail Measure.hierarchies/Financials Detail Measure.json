@@ -1,0 +1,27 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Financials Detail Measure",
+	"Elements":
+	[
+		{
+			"Name":"Document Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Line Item Description",
+			"Type":"String"
+		},
+		{
+			"Name":"Activity",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"LineCount",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Financials Detail Measure.subsets/Financials_Drill_View.json"
+	]
+}

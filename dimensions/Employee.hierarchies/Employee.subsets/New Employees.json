@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"New Employees",
+	"Expression":"{DRILLDOWNMEMBER({[Employee].[Employee].[New]} , {[Employee].[Employee].[New]} , RECURSIVE)}"
+}

@@ -1,0 +1,20 @@
+{
+	"@type":"Cube",
+	"Name":"Allocation",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Allocation ID')"
+		},
+		{
+			"@id":"Dimensions('Allocation Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Allocation.views/Default.json"
+	]
+}

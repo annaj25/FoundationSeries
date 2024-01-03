@@ -1,0 +1,24 @@
+{
+	"@type":"Cube",
+	"Name":"Assets",
+	"Rules@Code.link":"Assets.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Asset')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Assets Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Assets.views/Default.json"
+	]
+}

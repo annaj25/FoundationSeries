@@ -1,0 +1,10 @@
+{
+	"@type":"Subset",
+	"Name":"Financials_Drill_View",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Period')/Hierarchies('Period')/Elements('2015-04')"
+		}
+	]
+}

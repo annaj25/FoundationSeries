@@ -1,0 +1,16 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Financials Measure",
+	"Elements":
+	[
+		{
+			"Name":"Activity",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Ending Balance",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

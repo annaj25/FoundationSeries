@@ -1,0 +1,167 @@
+{
+	"@type":"Hierarchy",
+	"Name":"DirectCashFlow",
+	"Elements":
+	[
+		{
+			"Name":"Cash Flows From Operations",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Receipts From Customers",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Cash Paid To Suppliers and Employees",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Interest Paid",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Taxes Paid",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Cash Provided/(Used) from Operations",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash Flows From Investing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Capital Expenditures",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Other Investments",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Cash Provided/(Used) from Investing",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash Flows From Financing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Short Term Borrowing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Long Term Borrowing",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Common Stock Proceeds",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Preferred Stock Proceeds",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Cash Provided/(Used) from Financing",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash - Beginning",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net Increase/(Decrease) in Cash",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Cash - Ending",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Net Cash Provided/(Used) from Operations",
+			"ComponentName":"Cash Flows From Operations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Operations",
+			"ComponentName":"Cash Receipts From Customers",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Operations",
+			"ComponentName":"Cash Paid To Suppliers and Employees",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Operations",
+			"ComponentName":"Interest Paid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Operations",
+			"ComponentName":"Taxes Paid",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Investing",
+			"ComponentName":"Cash Flows From Investing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Investing",
+			"ComponentName":"Capital Expenditures",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Investing",
+			"ComponentName":"Other Investments",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Financing",
+			"ComponentName":"Cash Flows From Financing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Financing",
+			"ComponentName":"Net Short Term Borrowing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Financing",
+			"ComponentName":"Net Long Term Borrowing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Financing",
+			"ComponentName":"Net Common Stock Proceeds",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Cash Provided/(Used) from Financing",
+			"ComponentName":"Net Preferred Stock Proceeds",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase/(Decrease) in Cash",
+			"ComponentName":"Net Cash Provided/(Used) from Operations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase/(Decrease) in Cash",
+			"ComponentName":"Net Cash Provided/(Used) from Investing",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Increase/(Decrease) in Cash",
+			"ComponentName":"Net Cash Provided/(Used) from Financing",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

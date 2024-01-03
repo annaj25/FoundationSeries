@@ -1,0 +1,115 @@
+SKIPCHECK;
+
+[]=If(ELISANC('Version','All Reporting Versions',!Version) =1,STET,Continue);
+
+#Region Salary
+['Monthly Salary'] = N: ['Annual Salary'] / 12;
+#EndRegion
+
+
+#Region Overtime %
+['Overtime %'] = N: IF (
+         DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Salaried Flag' ) @=  'H' &
+         long(trim(DB( 'Employee Forecast',!Version, !Department, !Employee, 'Overtime % Override'))) > 0,
+         NUMBR(DB( 'Employee Forecast', !Version, !Department, !Employee, 'Overtime % Override' )),
+         Continue );
+
+['Overtime %'] = N: IF (
+         DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Salaried Flag' ) @=  'H' &
+          DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Annual Salary' ) <> 0 ,
+         DB ( 'Labor Rate', !Version, 'Overtime %', 'Value' ) ,
+         0 );
+#EndRegion
+
+#Region Bonus %
+
+['Bonus %'] = N: IF (
+     long(trim(DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Bonus % Override' ))) > 0,
+     NUMBR(DB ( ' Employee Forecast', !Version, !Department, !Employee, 'Bonus % Override' )),
+     Continue );
+
+['Bonus %'] = N: IF (
+         DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Annual Salary' ) <> 0 ,
+         DB ( 'Labor Rate', !Version, 'Bonus %', 'Value' ) ,
+         0 );
+#EndRegion
+
+#Region Mert Increase %
+['Merit Increase %'] = N: IF (
+     long(trim(DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Merit Increase % Override' ))) > 0,
+     NUMBR(DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Merit Increase % Override' )),
+     continue);
+
+['Merit Increase %'] = N: IF (
+         DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Annual Salary' ) <> 0 ,
+         DB ( 'Labor Rate', !Version, 'Merit Increase %', 'Value' ) ,
+         0 );
+#EndRegion
+
+#Region Commission %
+['Commission %'] = N: IF (
+     long(trim(DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Commission % Override' ))) > 0,
+     NUMBR(DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Commission % Override' )),
+    continue );
+
+['Commission %'] = N: IF (
+         DB ( 'Employee Forecast', !Version, !Department, !Employee, 'Annual Salary' ) <> 0 ,
+         DB ( 'Labor Rate', !Version, 'Commission %', 'Value' ) ,
+         0 );
+#EndRegion
+
+['Start Date (TM1)'] = N: If ((DB('Employee Forecast', !Version, !Department, !Employee, 'Start Date') @<> ''),
+	DayNo(
+	SUBST(DB('Employee Forecast', !Version, !Department, !Employee,  'Start Date'),7,4) | '-' |
+	SUBST(DB('Employee Forecast', !Version, !Department, !Employee,  'Start Date'),1,2) | '-' |
+	SUBST(DB('Employee Forecast', !Version, !Department, !Employee,  'Start Date'),4,2)),
+	Continue);
+
+['Start Date (Excel)'] = N:If ((DB('Employee Forecast', !Version, !Department, !Employee, 'Start Date') @<> ''),
+	['Start Date (TM1)'] + 21916, Continue);
+
+['End Date (TM1)'] = N: If (DB('Employee Forecast', !Version, !Department, !Employee, 'End Date') @<> '',
+	DayNo(
+	SUBST(DB('Employee Forecast', !Version, !Department, !Employee, 'End Date'),7,4) | '-' |
+	SUBST(DB('Employee Forecast', !Version, !Department, !Employee, 'End Date'),1,2) | '-' |
+	SUBST(DB('Employee Forecast', !Version, !Department, !Employee, 'End Date'),4,2)),
+	0);
+['End Date (Excel)'] = N: If (DB('Employee Forecast', !Version, !Department, !Employee, 'End Date') @<> '',
+	['End Date (TM1)'] + 21916,
+	0);
+
+FEEDERS;
+
+#Region Internal Feeders
+#['Annual Salary'] =>['Base Rate'];
+[Version:'Forecast','Annual Salary'] => ['Monthly Salary'];
+#['Base Rate'] => ['Annual Salary'];
+[Version:'Forecast','Bonus % Override'] => ['Bonus %'];
+[Version:'Forecast','Commission % Override'] => ['Commission %'];
+[Version:'Forecast','Merit Increase % Override'] => ['Merit Increase %'];
+[Version:'Forecast','Overtime % Override'] => ['Overtime %'];
+#['Car Allowance % Override'] => ['Car Allowance %'];
+#EndRegion
+
+#Region External Feeders
+
+[Version:'Forecast','Start Date (TM1)'] => ['Start Date (Excel)'];
+[Version:'Forecast','Start Date'] => ['Start Date (TM1)'];
+
+[Version:'Forecast','End Date (TM1)'] => ['End Date (Excel)'];
+[Version:'Forecast','End Date'] => ['End Date (TM1)'];
+
+#['Start Date (TM1)' ] =>
+#	DB('Labor Forecast', !Version, !Employee,
+#		DB('Employee Forecast', !Version, !Employee, 'Cost Center'), 'FTE', 'All Periods', 'Value');
+
+#['Start Date (TM1)' ] =>
+#	DB('Employee Department', !Version, !Employee,
+#		DB('Employee Forecast', !Version, !Employee, 'Department'), 'All Periods', 'FTE');
+
+#['Start Date (TM1)' ] =>
+#	DB('Employee Department', !Version, !Employee,
+#		DB('Employee Forecast', !Version, !Employee, 'Transfer To Department'), 'All Periods', 'FTE');
+
+['Start Date (TM1)' ,'Forecast'] =>DB('Headcount', !Employee, !Department, 'Home FTE', 'All Periods', 'Value');
+['End Date (TM1)' ,'Forecast'] =>DB('Headcount', !Employee, !Department, 'Home FTE', 'All Periods', 'Value');

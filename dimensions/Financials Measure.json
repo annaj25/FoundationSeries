@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Financials Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Financials Measure')/Hierarchies('Financials Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Financials Measure.hierarchies/Financials Measure.json"
+	]
+}

@@ -1,0 +1,35 @@
+{
+	"@type":"Cube",
+	"Name":"Expense Detail",
+	"Rules@Code.link":"Expense Detail.rules",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Currency')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Line Id')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Expense Detail Measure')"
+		}
+	],
+	"Views@Code.links":
+	[
+		"Expense Detail.views/Default.json",
+		"Expense Detail.views/Expense Detail Drill.json",
+		"Expense Detail.views/Travel Expense Input.json"
+	]
+}

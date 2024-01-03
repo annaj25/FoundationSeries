@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"DirectCashFlow",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('DirectCashFlow')/Hierarchies('DirectCashFlow')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"DirectCashFlow.hierarchies/DirectCashFlow.json"
+	]
+}

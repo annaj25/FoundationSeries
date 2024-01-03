@@ -1,0 +1,31 @@
+SKIPCHECK;
+
+
+
+
+
+  ['Home FTE'] = C: IF ( ELLEV ( 'Period', !Period ) > 0,
+     DB ( 'Headcount',!Employee,!Department,'Home FTE',ATTRS ( 'Period', !Period, 'Period End' ), 'Value' ),
+      Continue );
+     
+
+['Home FTE'] = N: IF ( DB ( 'Employee Forecast',  'Forecast', DB('}Employee Information', 'Forecast', !Employee, 'Home Department'), !Employee, 'Start Date (TM1)' ) <= 0 , 0, Continue );
+
+
+['Home FTE']  = N: IF (
+     DB ( '}Calendar', SUBST(!Period,1,4), 'M' | SUBST(!Period,6,2), 'TM1 End Date' ) <
+	DB ( 'Employee Forecast',  'Forecast', DB('}Employee Information', 'Forecast', !Employee, 'Home Department'), !Employee, 'Start Date (TM1)' ) ,
+     0,
+     Continue );
+
+['Home FTE'] = N: IF (
+     DB ( 'Employee Forecast',  'Forecast', DB('}Employee Information', 'Forecast', !Employee, 'Home Department'), !Employee, 'End Date (TM1)' ) > 0 &
+	(DB ( '}Calendar', SUBST(!Period,1,4), 'M' | SUBST(!Period,6,2), 'TM1 Beg Date' ) >
+	DB ( 'Employee Forecast',  'Forecast', DB('}Employee Information', 'Forecast', !Employee, 'Home Department'), !Employee, 'End Date (TM1)' )),
+     0,
+     Continue );
+
+['Home FTE'] = N: If (!Department @<>  DB('}Employee Information', 'Forecast', !Employee, 'Home Department'),0,1);
+
+
+FEEDERS;

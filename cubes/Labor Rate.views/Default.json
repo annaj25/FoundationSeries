@@ -1,0 +1,130 @@
+{
+	"@type":"NativeView",
+	"Name":"Default",
+	"Columns":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Labor Rate Measure')/Hierarchies('Labor Rate Measure')"
+				},
+				"Expression":"TM1SubsetAll([Labor Rate Measure])"
+			}
+		}
+	],
+	"Rows":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')"
+				},
+				"Elements":
+				[
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Commission %')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Payroll Tax Percent')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('401k Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Fringe Benefits Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Bonus Calculation Method')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Bonus Payout Month')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Merit Increase Month')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('SUTA Rates')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('SUTA Caps')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('SUTA Wage Limits')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Basic Life and A&D Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Bonus %')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Car Allowance %')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FUTA Cap')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FUTA Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('FUTA Wage Limit')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Health Insurance Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Long Term Disability Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Merit Increase %')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Overtime %')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Short Term Disability Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Workers Comp Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Social Security Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Social Security Limit')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Medicare Rate')"
+					},
+					{
+						"@id":"Dimensions('Labor Rate Parameter')/Hierarchies('Labor Rate Parameter')/Elements('Medicare Limit')"
+					}
+				]
+			}
+		}
+	],
+	"Titles":
+	[
+		{
+			"Subset":
+			{
+				"Hierarchy":
+				{
+					"@id":"Dimensions('Version')/Hierarchies('Version')"
+				},
+				"Expression":"TM1SubsetAll([Version])"
+			},
+			"Selected":
+			{
+				"@id":"Dimensions('Version')/Hierarchies('Version')/Elements('Forecast')"
+			}
+		}
+	],
+	"SuppressEmptyColumns":false,
+	"SuppressEmptyRows":false,
+	"FormatString":"0.#########"
+}
