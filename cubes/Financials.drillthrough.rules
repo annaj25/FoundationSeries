@@ -1,7 +1,0 @@
-['All Periods'] = S:STET;
-
-## Drill into a Detail cube
-#[] = S:'Financials';
-
-## Drill into a Relational database
-[] = S:'Financials_SQL';

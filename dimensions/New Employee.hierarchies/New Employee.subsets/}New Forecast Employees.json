@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"}New Forecast Employees",
+	"Expression":"{TM1FILTERBYLEVEL( { HIERARCHIZE( {TM1SUBSETALL( [New Employee] )} ) }, 0)}"
+}

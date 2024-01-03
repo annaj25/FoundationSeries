@@ -1,0 +1,213 @@
+{
+	"@type":"Hierarchy",
+	"Name":"New Assets",
+	"Elements":
+	[
+		{
+			"Name":"All Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"New Assets",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"New Assets 01",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 02",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 03",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 04",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 05",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 06",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 07",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 08",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 09",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 10",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 11",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 12",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 13",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 14",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 15",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 16",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 17",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 18",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 19",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"New Assets 20",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Current Assets",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Assets",
+			"ComponentName":"New Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Assets",
+			"ComponentName":"Current Assets",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 01",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 02",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 03",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 04",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 05",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 06",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 07",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 08",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 09",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 10",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 11",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 12",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 13",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 14",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 15",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 16",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 17",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 18",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 19",
+			"Weight":1
+		},
+		{
+			"ParentName":"New Assets",
+			"ComponentName":"New Assets 20",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

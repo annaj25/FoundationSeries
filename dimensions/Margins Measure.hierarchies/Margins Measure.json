@@ -1,0 +1,1505 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Margins Measure",
+	"Elements":
+	[
+		{
+			"Name":"Misc Costs",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Net Sales",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Forecast Entry",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Margin Cogs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Net COGS",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Yield",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Feed Flag",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Yield %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Forecast Entry Std COGs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Forecast Entry Excl F & H",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rebates",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Adj Gross Sales",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Freight",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price Adjustments",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Test",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Price Adj Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warranty",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warranty Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tooling Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Tax Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"IFP Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Promotional",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Early Payment Disc",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"EPD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"EPD Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warranty-Returns",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Warranty Returns",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warranty Returns Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Excess/Obsolete",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Excess Obsolete",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Excess Obsolete Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rebates - Product",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Material/Labor Variance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Matl/Labor Var",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mat/Labor Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"WIP Var",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Resin/CNC Var",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Inv Adj",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"FG IA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Scrap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Scrap Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Shrink",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Shrink Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Reval",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FG Reval Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freight-Out",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Freight Out",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Freight Out Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Std Cost of Sales",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Std Cost of Sales (Excl Dist)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Rebates Sub",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Rebates Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Gross Sales",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Production Variance",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"All Production Variances",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross Profit",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Gross Profit %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Business Segment",
+			"Type":"String"
+		},
+		{
+			"Name":"Distribution",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"RCGL",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"HCM",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Marketing",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Product Mgt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warranty MKT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Warranty MKT Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Product Warranty",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"NON-Lighting MKT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Lighting MKT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Admin MKT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Royalties MKT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Production Calc",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Contribution Margin",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Unallocated",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Sales",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mkt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Admin",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Exec",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"RD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Eng",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Op Income(Loss)",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Production Assembly",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Production",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Contract Mnfg",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Contract",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Molding/Extr/Mach",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Prod Var Other",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Production Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Contract Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Molding/Extrusion/Machining",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Molding/Extr/Mach Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Prod Var Other Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Production Subs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Contrcat Subs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Mold/Extr/Mach Subs",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Flags",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Feeder Warranty",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Warranty Returns",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Excess Obsolete",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Freight Out",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Production Calc ACFT",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Price Adj",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Material",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Scrap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Direct labor",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Direct O/H",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Indirect O/H",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Outside Operations",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Handling Charges",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Misc Entries",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Std COS Dist",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder EPD",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Rebates Sub",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder FG IA",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder FG Reval",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder FG Scrap",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder FG Shrink",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Rebates-Product",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Feeder Product Mgt",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Comments",
+			"Type":"String"
+		},
+		{
+			"Name":"Non Feeders",
+			"Type":"Consolidated"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Handling Charges",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Outside Operations",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Indirect O/H",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Direct O/H",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Direct labor",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Material",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Scrap",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Misc Costs",
+			"ComponentName":"Forecast Entry Std COGs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Adj Gross Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Tooling Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Warranty",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Early Payment Disc",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Rebates",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Warranty Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"Tax Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net Sales",
+			"ComponentName":"IFP Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"Rebates - Product",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"Material/Labor Variance",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"FG Inv Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"Std Cost of Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"Excess/Obsolete",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"Warranty-Returns",
+			"Weight":1
+		},
+		{
+			"ParentName":"Net COGS",
+			"ComponentName":"Freight-Out",
+			"Weight":1
+		},
+		{
+			"ParentName":"Yield",
+			"ComponentName":"Net Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Yield",
+			"ComponentName":"Scrap",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Yield",
+			"ComponentName":"Material",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Yield",
+			"ComponentName":"Outside Operations",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Yield",
+			"ComponentName":"Misc Entries",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Yield",
+			"ComponentName":"Material/Labor Variance",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Rebates",
+			"ComponentName":"Rebates Sub",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rebates",
+			"ComponentName":"Rebates Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Rebates",
+			"ComponentName":"Test",
+			"Weight":1
+		},
+		{
+			"ParentName":"Adj Gross Sales",
+			"ComponentName":"Gross Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Adj Gross Sales",
+			"ComponentName":"Price Adjustments",
+			"Weight":1
+		},
+		{
+			"ParentName":"Adj Gross Sales",
+			"ComponentName":"Test",
+			"Weight":1
+		},
+		{
+			"ParentName":"Price Adjustments",
+			"ComponentName":"Price Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Price Adjustments",
+			"ComponentName":"Price Adj Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Early Payment Disc",
+			"ComponentName":"EPD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Early Payment Disc",
+			"ComponentName":"EPD Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Early Payment Disc",
+			"ComponentName":"Test",
+			"Weight":1
+		},
+		{
+			"ParentName":"Warranty-Returns",
+			"ComponentName":"Warranty Returns",
+			"Weight":1
+		},
+		{
+			"ParentName":"Warranty-Returns",
+			"ComponentName":"Warranty Returns Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Excess/Obsolete",
+			"ComponentName":"Excess Obsolete",
+			"Weight":1
+		},
+		{
+			"ParentName":"Excess/Obsolete",
+			"ComponentName":"Excess Obsolete Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Material/Labor Variance",
+			"ComponentName":"Matl/Labor Var",
+			"Weight":1
+		},
+		{
+			"ParentName":"Material/Labor Variance",
+			"ComponentName":"Mat/Labor Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Material/Labor Variance",
+			"ComponentName":"WIP Var",
+			"Weight":1
+		},
+		{
+			"ParentName":"Material/Labor Variance",
+			"ComponentName":"Resin/CNC Var",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG IA",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG Scrap",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG Scrap Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG Shrink",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG Shrink Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG Reval",
+			"Weight":1
+		},
+		{
+			"ParentName":"FG Inv Adj",
+			"ComponentName":"FG Reval Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Freight-Out",
+			"ComponentName":"Freight Out",
+			"Weight":1
+		},
+		{
+			"ParentName":"Freight-Out",
+			"ComponentName":"Freight Out Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Material",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Scrap",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Direct labor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Direct O/H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Indirect O/H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Outside Operations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Handling Charges",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Misc Entries",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales",
+			"ComponentName":"Std COS Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Material",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Scrap",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Direct labor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Direct O/H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Indirect O/H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Outside Operations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Handling Charges",
+			"Weight":1
+		},
+		{
+			"ParentName":"Std Cost of Sales (Excl Dist)",
+			"ComponentName":"Misc Entries",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Sales",
+			"ComponentName":"Freight",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Sales",
+			"ComponentName":"Forecast Entry Excl F & H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production Variance",
+			"ComponentName":"Production Assembly",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production Variance",
+			"ComponentName":"Contract Mnfg",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production Variance",
+			"ComponentName":"Molding/Extrusion/Machining",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Production Variances",
+			"ComponentName":"Production",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Production Variances",
+			"ComponentName":"Contract",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Production Variances",
+			"ComponentName":"Molding/Extr/Mach",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Production Variances",
+			"ComponentName":"Prod Var Other",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Net Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Net COGS",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Gross Profit",
+			"ComponentName":"Production Variance",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Distribution",
+			"ComponentName":"RCGL",
+			"Weight":1
+		},
+		{
+			"ParentName":"Distribution",
+			"ComponentName":"HCM",
+			"Weight":1
+		},
+		{
+			"ParentName":"Marketing",
+			"ComponentName":"Product Mgt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Marketing",
+			"ComponentName":"Warranty MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Marketing",
+			"ComponentName":"Warranty MKT Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Marketing",
+			"ComponentName":"Admin MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Product Warranty",
+			"ComponentName":"Warranty MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Product Warranty",
+			"ComponentName":"Warranty MKT Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Contribution Margin",
+			"ComponentName":"Gross Profit",
+			"Weight":1
+		},
+		{
+			"ParentName":"Contribution Margin",
+			"ComponentName":"Distribution",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Contribution Margin",
+			"ComponentName":"Marketing",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Unallocated",
+			"ComponentName":"Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unallocated",
+			"ComponentName":"Mkt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unallocated",
+			"ComponentName":"Admin",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unallocated",
+			"ComponentName":"Exec",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unallocated",
+			"ComponentName":"RD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Unallocated",
+			"ComponentName":"Eng",
+			"Weight":1
+		},
+		{
+			"ParentName":"Op Income(Loss)",
+			"ComponentName":"Contribution Margin",
+			"Weight":1
+		},
+		{
+			"ParentName":"Op Income(Loss)",
+			"ComponentName":"Unallocated",
+			"Weight":-1
+		},
+		{
+			"ParentName":"Production Assembly",
+			"ComponentName":"Production",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production Assembly",
+			"ComponentName":"Prod Var Other",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production Assembly",
+			"ComponentName":"Production Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Production Assembly",
+			"ComponentName":"Prod Var Other Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Contract Mnfg",
+			"ComponentName":"Contract",
+			"Weight":1
+		},
+		{
+			"ParentName":"Contract Mnfg",
+			"ComponentName":"Contract Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Molding/Extrusion/Machining",
+			"ComponentName":"Molding/Extr/Mach",
+			"Weight":1
+		},
+		{
+			"ParentName":"Molding/Extrusion/Machining",
+			"ComponentName":"Molding/Extr/Mach Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Warranty",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Warranty Returns",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Excess Obsolete",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Freight Out",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Production Calc ACFT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Price Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder EPD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Rebates Sub",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder FG IA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder FG Reval",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder FG Scrap",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder FG Shrink",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Rebates-Product",
+			"Weight":1
+		},
+		{
+			"ParentName":"Feeder Flags",
+			"ComponentName":"Feeder Product Mgt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Handling Charges",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Outside Operations",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Indirect O/H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Direct O/H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Direct labor",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Material",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Scrap",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Forecast Entry Std COGs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Forecast Entry",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Margin Cogs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Freight",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Forecast Entry Excl F & H",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Price Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Price Adj Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Test",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Tooling Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Warranty",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"EPD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"EPD Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Rebates Sub",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Rebates Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Warranty Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Tax Adj",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"IFP Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Misc Entries",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Matl/Labor Var",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Mat/Labor Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"WIP Var",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Resin/CNC Var",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Feed Flag",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Yield %",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Promotional",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Production",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Contract",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Molding/Extr/Mach",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Prod Var Other",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Gross Profit %",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Warranty MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Warranty MKT Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"NON-Lighting MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Lighting MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Royalties MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Production Calc",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Rebates - Product",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG IA",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG Scrap",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG Scrap Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG Shrink",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG Shrink Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG Reval",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"FG Reval Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Std COS Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Excess Obsolete",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Excess Obsolete Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Warranty Returns",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Warranty Returns Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Freight Out",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Freight Out Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Production Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Prod Var Other Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Contract Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Molding/Extr/Mach Dist",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"RCGL",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"HCM",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Product Mgt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Admin MKT",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Sales",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Mkt",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Admin",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Exec",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"RD",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Eng",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Production Subs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Contrcat Subs",
+			"Weight":1
+		},
+		{
+			"ParentName":"Non Feeders",
+			"ComponentName":"Mold/Extr/Mach Subs",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":[]
+}

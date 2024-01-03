@@ -1,6 +1,0 @@
-skipcheck;
-
-
-
-feeders;
-['Forecast','All Line Ids', 'Forecast Entry'] => DB('Forecast',!Version,!Currency,!Department,!Account,!Period,'Forecast Entry');

@@ -1,0 +1,13 @@
+{
+	"@type":"Dimension",
+	"Name":"Margins Measure",
+	"AllLeavesHierarchyName":"",
+	"DefaultHierarchy":
+	{
+		"@id":"Dimensions('Margins Measure')/Hierarchies('Margins Measure')"
+	},
+	"Hierarchies@Code.links":
+	[
+		"Margins Measure.hierarchies/Margins Measure.json"
+	]
+}

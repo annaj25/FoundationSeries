@@ -1,0 +1,164 @@
+{
+	"@type":"Hierarchy",
+	"Name":"New Employee Measure",
+	"Elements":
+	[
+		{
+			"Name":"Annual Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Base Rate",
+			"Type":"String"
+		},
+		{
+			"Name":"Birth Date",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Bonus % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"State",
+			"Type":"String"
+		},
+		{
+			"Name":"Employee Class",
+			"Type":"String"
+		},
+		{
+			"Name":"Car Allowance %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Car Allowance % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Commission %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Commission % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Cost Center",
+			"Type":"String"
+		},
+		{
+			"Name":"Current Flag",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Department Name",
+			"Type":"String"
+		},
+		{
+			"Name":"Employment Classification",
+			"Type":"String"
+		},
+		{
+			"Name":"End Date",
+			"Type":"String"
+		},
+		{
+			"Name":"End Date (Excel)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"End Date (TM1)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"FLSA Status",
+			"Type":"String"
+		},
+		{
+			"Name":"Hire Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Job Title",
+			"Type":"String"
+		},
+		{
+			"Name":"Merit Increase %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Merit Increase % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Monthly Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overtime %",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Overtime % Override",
+			"Type":"String"
+		},
+		{
+			"Name":"Pay Frequency",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Salaried Flag",
+			"Type":"String"
+		},
+		{
+			"Name":"Salesperson Flag",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Sales Territory Country",
+			"Type":"String"
+		},
+		{
+			"Name":"Sales Territory Group",
+			"Type":"String"
+		},
+		{
+			"Name":"Sales Territory Region",
+			"Type":"String"
+		},
+		{
+			"Name":"Sick Leave Hours",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Start Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Start Date (Excel)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Start Date (TM1)",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Status",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Term Date",
+			"Type":"String"
+		},
+		{
+			"Name":"Vacation Hours",
+			"Type":"Numeric"
+		}
+	],
+	"Subsets@Code.links":[]
+}

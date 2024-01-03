@@ -1,0 +1,32 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Employee Information Measure",
+	"Elements":
+	[
+		{
+			"Name":"Home Department",
+			"Type":"String"
+		},
+		{
+			"Name":"Annual Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Monthly Salary",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"State",
+			"Type":"String"
+		},
+		{
+			"Name":"Job Title",
+			"Type":"String"
+		},
+		{
+			"Name":"Salaried Flag",
+			"Type":"String"
+		}
+	],
+	"Subsets@Code.links":[]
+}
