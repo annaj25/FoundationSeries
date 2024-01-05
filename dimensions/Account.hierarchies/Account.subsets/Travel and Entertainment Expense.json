@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Travel and Entertainment Expense",
+	"Expression":"{ DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [Account] )}, \"Travel & Entertainment\")}, {[Account].[Travel & Entertainment]} ) }"
+}

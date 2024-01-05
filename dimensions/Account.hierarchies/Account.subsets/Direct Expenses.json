@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Direct Expenses",
+	"Expression":"{ DRILLDOWNMEMBER(  {[Account].[Direct Expenses]}, {[Account].[Direct Expenses]} ) }"
+}

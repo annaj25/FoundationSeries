@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Departments - Level 0",
+	"Expression":"{TM1SORT( { HIERARCHIZE( {TM1FILTERBYLEVEL( {TM1SUBSETALL( [Department] )}, 0)} ) }, ASC)}"
+}

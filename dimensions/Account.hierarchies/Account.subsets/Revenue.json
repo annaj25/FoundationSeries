@@ -1,0 +1,19 @@
+{
+	"@type":"Subset",
+	"Name":"Revenue",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Intercompany Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Product & Software Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Service Revenue')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Revenue')"
+		}
+	]
+}

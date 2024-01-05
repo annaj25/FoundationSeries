@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"CurrentPrior",
+	"Expression":"{EXCEPT(TM1TOGGLEDRILLSTATE({[Period].[Period].[2022],[Period].[Period].[2023]} , {[Period].[Period].[2023]} , EXPAND_BELOW , RECURSIVE) , {[Period].[Period].[2023^2023-00]})}"
+}

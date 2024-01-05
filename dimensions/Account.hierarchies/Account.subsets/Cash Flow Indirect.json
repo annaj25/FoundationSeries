@@ -1,0 +1,82 @@
+{
+	"@type":"Subset",
+	"Name":"Cash Flow Indirect",
+	"Elements":
+	[
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Net Income')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Accounts Receivable')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Inventory')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other Current Assets')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Accounts Payable')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Accrued Expenses')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Deferred Assets')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Long-Term Tax Assets')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Long-term Deferred Assets')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Restricted Cash-LT')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Restricted Cash-ST')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Other Current Liabilities')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Deferred Liabilities-ST')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('29050')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Deferred Revenue-ST')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Deferred Revenue-LT')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Debt-ST')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('29010')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Fixed Assets (Net)')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Common Stock')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Preferred Stock')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Convertible Promissory Note-LT')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Additional Paid in Capital')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Cash , Cash Equivalents and Investments')"
+		},
+		{
+			"@id":"Dimensions('Account')/Hierarchies('Account')/Elements('Depreciation & Amortization')"
+		}
+	]
+}

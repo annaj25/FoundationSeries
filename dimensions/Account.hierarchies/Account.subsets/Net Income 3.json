@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Net Income 3",
+	"Expression":"{ DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( { DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( { HIERARCHIZE( {TM1SUBSETALL( [Account] )} ) }, \"Net Income\")}, {[Account].[Net Income]} ) }, {[Account].[Operating Income]} ) }, {[Account].[Operating Income^Gross Profit]} ) }, {[Account].[Total Expenses]} ) }, {[Account].[Net Income^Tax]} ) }, {[Account].[Operating Income^Gross Profit^Cost of Revenue]} ) }, {[Account].[Operating Income^Gross Profit^Revenue]} ) }, {[Account].[Operating Income^Gross Profit^Cost of Revenue^Intercompany Costs]} ) }"
+}

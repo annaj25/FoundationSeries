@@ -1,0 +1,71 @@
+{
+	"@type":"Hierarchy",
+	"Name":"Version",
+	"Elements":
+	[
+		{
+			"Name":"Actuals",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Working Versions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Budget",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Forecast",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"All Reporting Versions",
+			"Type":"Consolidated"
+		},
+		{
+			"Name":"Budget Version 1",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"Budget Version 2",
+			"Type":"Numeric"
+		},
+		{
+			"Name":"TestingTransfer",
+			"Type":"Numeric"
+		}
+	],
+	"Edges":
+	[
+		{
+			"ParentName":"All Working Versions",
+			"ComponentName":"Budget Version 1",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Working Versions",
+			"ComponentName":"Budget Version 2",
+			"Weight":1
+		},
+		{
+			"ParentName":"All Working Versions",
+			"ComponentName":"Budget",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Working Versions",
+			"ComponentName":"Forecast",
+			"Weight":0
+		},
+		{
+			"ParentName":"All Working Versions",
+			"ComponentName":"TestingTransfer",
+			"Weight":1
+		}
+	],
+	"Subsets@Code.links":
+	[
+		"Version.subsets/Default.json"
+	]
+}

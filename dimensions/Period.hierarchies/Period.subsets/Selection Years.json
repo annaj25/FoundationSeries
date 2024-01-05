@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Selection Years",
+	"Expression":"{ EXCEPT( { DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [Period] )}, \"All PEriods\")}, {[Period].[All Periods]} ) }, { [Period].[All Periods] }) }"
+}

@@ -1,0 +1,5 @@
+{
+	"@type":"Subset",
+	"Name":"Department by Function Summary",
+	"Expression":"{ DRILLDOWNMEMBER( {TM1FILTERBYPATTERN( {TM1SUBSETALL( [Department] )}, \"Departments by Function\")}, {[Department].[Departments by Function]} ) }"
+}

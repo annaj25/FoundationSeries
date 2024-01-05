@@ -1,0 +1,26 @@
+{
+	"@type":"Cube",
+	"Name":"TestingGitIntegration",
+	"Dimensions":
+	[
+		{
+			"@id":"Dimensions('Version')"
+		},
+		{
+			"@id":"Dimensions('Department')"
+		},
+		{
+			"@id":"Dimensions('Account')"
+		},
+		{
+			"@id":"Dimensions('Year')"
+		},
+		{
+			"@id":"Dimensions('Period')"
+		},
+		{
+			"@id":"Dimensions('Forecast Measure')"
+		}
+	],
+	"Views@Code.links":[]
+}
